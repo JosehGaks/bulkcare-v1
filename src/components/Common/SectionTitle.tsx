@@ -1,3 +1,5 @@
+import { Badge } from "../ui/badge";
+
 const SectionTitle = ({
   subtitle,
   title,
@@ -12,26 +14,16 @@ const SectionTitle = ({
   center?: boolean;
 }) => {
   return (
-    <div className="-mx-4 flex flex-wrap">
-      <div
-        className={`wow fadeInUp w-full px-4 ${
-          center ? "mx-auto text-center" : ""
-        }`}
-        data-wow-delay=".1s"
-        style={{ maxWidth: width }}
-      >
-        {subtitle && (
-          <span className="mb-2 block text-lg font-semibold text-primary">
-            {subtitle}
-          </span>
-        )}
-        <h2 className="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
-          {title}
-        </h2>
-        <p className="text-base leading-relaxed text-body-color dark:text-dark-6 sm:leading-relaxed">
+    <div className="-mx-4 flex-wrap flex text-center justify-center items-center gap-4 flex-col">
+    <Badge>{title}</Badge>
+    <div className="flex gap-2 flex-col">
+          <h2 className="text-3xl md:text-5xl tracking-tighter max-w-xl text-center font-regular">
+          {subtitle}
+          </h2>
+          <p className="text-lg leading-relaxed tracking-tight text-muted-foreground max-w-xl text-center">
           {paragraph}
-        </p>
-      </div>
+          </p>
+        </div>
     </div>
   );
 };

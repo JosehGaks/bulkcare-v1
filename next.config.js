@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
+    domains: ['images.unsplash.com'],
     remotePatterns: [
       {
         protocol: 'https',
@@ -164,7 +165,13 @@ const nextConfig = {
         hostname: 'equitel.com',
         port: '',
         pathname: '/Content/equitel/images/equitel_logo.png'
-      }
+      },
+      {
+        protocol: 'https',
+        hostname: 'assets.aceternity.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 }

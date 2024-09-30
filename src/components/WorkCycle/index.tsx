@@ -1,4 +1,5 @@
 import SectionTitle from "../Common/SectionTitle";
+import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
 import SingleWorkCycle from "./singleWorkCycle";
 import workCycleData from "./workCycleData";
 
@@ -13,11 +14,22 @@ const WorkCycle = () => {
           center
         />
 
-        <div className="-mx-4 mt-12 flex flex-wrap lg:mt-20">
+        {/* <div className="-mx-4 mt-12 flex flex-wrap lg:mt-20">
           {workCycleData.map((cycleUnit, i) => (
             <SingleWorkCycle key={i} cycleUnit={cycleUnit} />
           ))}
-        </div>
+        </div> */}
+
+        <BentoGrid className="-mx-4 mt-12 md:auto-rows-[20rem]">
+      {workCycleData.map((item, i) => (
+        <BentoGridItem
+          key={i}
+          title={item.title}
+          description={item.description}
+          icon={item.icon}
+        />
+      ))}
+    </BentoGrid>
       </div>
     </section>
   );

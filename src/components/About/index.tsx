@@ -15,7 +15,7 @@ const About = () => {
                 Building Brands Through Exceptional Customer Support
                 </h2>
                 <p className="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
-                At Bulk Care, we believe that exceptional customer support is the cornerstone of a strong brand. Our team of dedicated experts provides efficient and secure outsourced customer support tailored to meet the unique needs of your business. Whether you're a startup aiming to establish your market presence or an industry leader striving to maintain excellence, we streamline and enhance your customer care operations.
+                At Bulk Care, we believe that exceptional customer support is the cornerstone of a strong brand. Our team of dedicated experts provides efficient and secure outsourced customer support tailored to meet the unique needs of your business. Whether you&apos;re a startup aiming to establish your market presence or an industry leader striving to maintain excellence, we streamline and enhance your customer care operations.
                 </p>
 
                 <a

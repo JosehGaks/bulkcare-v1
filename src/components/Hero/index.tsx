@@ -1,63 +1,91 @@
+import { MoveRight, PhoneCall } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
-import Link from "next/link";
-import styles from "./style";
-import GetStarted from "./GetStarted";
-
-const Hero = () => {
-  const pink_gradiant = 'bg-gradient-to-r from-pink-300 to-pink-600 filter blur-[900px]'
-  const white_gradiant = 'bg-white bg-opacity-60 filter blur-[750px]'
-  const blue_gradiant = 'bg-gradient-to-t from-transparent via-blue-800 to-transparent filter blur-[123px]'
-  const bg_discount_gradient = 'bg-gradient-to-tr from-gray-700 to-indigo-900'
-  const text_gradient = ' bg-gradient-to-br from-teal-100 via-teal-200 to-teal-500 text-transparent bg-clip-text'
-
+import { Sparkles } from '@/components/ui/sparkles'
+ 
+function index() {
   return (
     <>
-      <section id="home" className={`flex md:flex-row flex-col ${styles.paddingY} container`}>
-        <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}>
-          {/* <div className={`flex flex-row items-center py-[6px] px-4 ${bg_discount_gradient} rounded-[10px] mb-2`}>
-            <img src={'https://i.imgur.com/5BZrGDw.png'} alt="discount" className="w-[32px] h-[32px]" />
-            <p className={`${styles.paragraph} ml-2`}>
-              <span className="text-white">20%</span> Discount For{" "}
-              <span className="text-white">1 Month</span> Account
-            </p>
-          </div> */}
-
-          <div className="flex flex-row justify-between items-center w-full">
-            <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-black dark:text-white ss:leading-[100.8px] leading-[75px]">
-            We handle your<br className="sm:block hidden" />{" "}
-              <span className={`${text_gradient}`}>customers</span>{" "}
+      <main className=" h-screen  w-full  overflow-hidden bg-black text-white ">
+        <section className="container mx-auto relative h-[90vh] mt-4 border border-white/10 w-full overflow-hidden rounded-2xl">
+          <article className="grid gap-4 text-center relative z-10 pt-10">
+            <span className="inline-block xl:text-base text-sm border p-1 px-3 w-fit mx-auto rounded-full border-[#3273ff] bg-[#0f1c35]">
+              Early Access
+            </span>
+            <h1 className="2xl:text-6xl  xl:text-5xl text-5xl font-semibold bg-gradient-to-b from-[#edeffd] to-[#7b9cda] bg-clip-text text-transparent leading-[100%] tracking-tighter">
+              Become an Animation Expert <br /> Easily at Our Academy
             </h1>
-            <div className="ss:flex hidden md:mr-4 mr-0">
-              <GetStarted />
-            </div>
+            <span>
+              Our expert-led courses are perfect for all skill levels. Gain{' '}
+              <br />
+              hands-on experience and create stunning animations <br /> effortlessly.
+              Join us today!
+            </span>
+            <button className="border border-blue-400 w-fit p-2 px-4 rounded-md bg-blue-900/40 hover:bg-blue-900/60  backdrop-blur-2xl mx-auto text-white">
+              Take The Course
+            </button>
+          </article>
+ 
+          <div className="absolute bottom-0 z-[2] h-[400px] w-screen overflow-hidden [mask-image:radial-gradient(100%_50%,white,transparent)] before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_bottom_center,#3273ff,transparent_90%)] before:opacity-40 after:absolute">
+            <Sparkles
+              density={1800}
+              speed={1.2}
+              color="#48b6ff"
+              direction="top"
+              className="absolute inset-x-0 bottom-0 h-full w-full "
+            />
           </div>
-
-          <h1 className="font-poppins font-semibold ss:text-[68px] text-[52px] text-black dark:text-white ss:leading-[100.8px] leading-[75px] w-full">
-          so you can handle your business.
-          </h1>
-          <p className={`${styles.paragraph} max-w-[470px] mt-5 text-black dark:text-white`}>
-          Enhance your customer experience with our reliable and efficient customer support solutions. Focus on your core business while we take care of your customers
-          </p>
-        </div>
-
-        <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
-          {/* <img src={'https://i.imgur.com/8RJDGMU.png'} alt="billing" className="w-[100%] h-[100%] relative z-[5]" /> */}
-          <Image src={'/images/hero/bulk_customer_care.webp'} alt="discount" width={1000} height={1000} className="w-[100%] h-[100%] relative z-[5] rounded-xl shadow-2xl" />
-
-          {/* gradient start */}
-          <div className={`absolute z-[0] w-[40%] h-[35%] top-0 ${pink_gradiant} `} />
-          <div className={`absolute z-[1] w-[80%] h-[80%] rounded-full ${white_gradiant} bottom-40`} />
-          <div className={`absolute z-[0] w-[50%] h-[50%] right-20 bottom-20 ${blue_gradiant}`} />
-          {/* gradient end */}
-        </div>
-
-        <div className={`ss:hidden ${styles.flexCenter}`}>
-          <GetStarted />
-        </div>
-      </section>
+        </section>
+      </main>
     </>
+  )
+}
+ 
+export default index
 
-  );
-};
-
-export default Hero;
+export const Hero = () => (
+  <div className="w-full py-20 lg:py-40">
+    <div className="container mx-auto relative mt-4 border border-white/10 w-full overflow-hidden rounded-2xl">
+      <div className="grid grid-cols-1 gap-8 items-center lg:grid-cols-2">
+        <div className="relative z-10 flex gap-4 flex-col">
+          <div>
+            <Badge variant="outline">We&apos;re live!</Badge>
+          </div>
+          <div className="flex gap-4 flex-col">
+            <h1 className="text-5xl md:text-7xl max-w-lg tracking-tighter text-left font-regular">
+              This is the start of something!
+            </h1>
+            <p className="text-xl leading-relaxed tracking-tight max-w-md text-left">
+            We are a customer-centric, digitally empowered outsourcing partner, specializing in providing People-as-a-Service solutions to high-growth, innovative, and tech-forward companies.
+            </p>
+          </div>
+          <div className="flex flex-row gap-4">
+            <Button size="lg" className="gap-4" variant="outline">
+              Jump on a call <PhoneCall className="w-4 h-4" />
+            </Button>
+            <Button size="lg" className="gap-4">
+              Sign up here <MoveRight className="w-4 h-4" />
+            </Button>
+          </div>
+        </div>
+        <div className="rounded-md aspect-rect">
+          <img
+            src="/images/hero/customer_care.png"
+            alt="hero"
+            className="rounded-md object-cover"
+          />
+        </div>
+      </div>
+      <div className="absolute bottom-0 z-[2] h-[400px] w-screen overflow-hidden [mask-image:radial-gradient(100%_50%,white,transparent)] before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_bottom_center,#3273ff,transparent_90%)] before:opacity-40 after:absolute">
+            <Sparkles
+              density={1800}
+              speed={1.2}
+              color="#48b6ff"
+              direction="top"
+              className="absolute inset-x-0 bottom-0 h-full w-full "
+            />
+          </div>
+    </div>
+  </div>
+);

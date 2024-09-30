@@ -30,7 +30,7 @@ export default function RootLayout({
       */}
       <head />
 
-      <body>
+      <body className="top-0">
         {loading ? (
           <PreLoader />
         ) : (

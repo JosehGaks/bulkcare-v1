@@ -1,40 +1,6 @@
 import { Client } from "@/types/client";
 export const clientsData: Client[] = [
-  {
-    id: 1,
-    title: "GrayGrids",
-    logo: "https://jetx.ke/assets/images/logo_jetx.png",
-    logoWhite: "https://jetx.ke/assets/images/logo_jetx.png",
-    link: "https://jetx.ke",
-  },
-  {
-    id: 2,
-    title: "Pakamia",
-    logo: "https://pakamia.ke/assets/images/logo_pakamia.png",
-    logoWhite: "https://pakamia.ke/assets/images/logo_pakamia.png",
-    link: "https://pakamia.ke",
-  },
-  {
-    id: 3,
-    title: "Pakasimba",
-    logo: "https://pakasimba.ke/assets/images/pakasimba_logo.png",
-    logoWhite: "https://pakasimba.ke/assets/images/pakasimba_logo.png",
-    link: "https://pakasimba.ke",
-  },
-  {
-    id: 4,
-    title: "Crash.ke",
-    logo: "https://crash.ke/assets/images/crashke_logo.png",
-    logoWhite: "https://crash.ke/assets/images/crashke_logo.png",
-    link: "https://crash.ke",
-  },
-  {
-    id: 5,
-    title: "ComterPesa",
-    logo: "https://cometpesa.ke/assets/images/cometpesa_logo.png",
-    logoWhite:"https://cometpesa.ke/assets/images/cometpesa_logo.png",
-    link: "https://cometpesa.ke",
-  },
+
   {
     id: 6,
     title: "Anga Cinema",
@@ -132,13 +98,6 @@ export const clientsData: Client[] = [
     logo: "http://velox.co.ke/wp-content/uploads/2019/02/Picture1.png",
     logoWhite: "http://velox.co.ke/wp-content/uploads/2019/02/Picture1.png",
     link: "http://velox.co.ke"
-  },
-  {
-    id: 22,
-    title: "Synqtel",
-    logo: "https://synqtel.com/wp-content/uploads/2022/11/Synqtel-final-logo.png.webp",
-    logoWhite: "https://synqtel.com/wp-content/uploads/2022/11/Synqtel-final-logo.png.webp",
-    link: "https://synqtel.com"
   },
   {
     id: 23,
