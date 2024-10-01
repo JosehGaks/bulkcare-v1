@@ -3,98 +3,24 @@ import Channels from "./Channels";
 
 const CallToAction = () => {
   return (
-    <section className="relative z-10 overflow-hidden bg-primary py-20 lg:py-[115px]">
-      <div className="container mx-auto">
-        <div className="relative overflow-hidden">
-          <div className="-mx-4 flex flex-wrap items-stretch">
-            <div className="w-full px-4">
-              <div className="mx-auto max-w-[570px] text-center">
-                <h2 className="mb-2.5 text-3xl font-bold text-white md:text-[38px] md:leading-[1.44]">
-                  <span>We offer comprehensive support across every communication channel</span>
-                  {/* <span className="text-3xl font-normal md:text-[40px]">
-                    {" "}
-                    Partner with Bulk Care Today!{" "}
-                  </span> */}
-                </h2>
-                <p className="mx-auto mb-6 max-w-[515px] text-base leading-[1.5] text-white">
-                
-                </p>
-                
-
-              </div>
-              <Channels/>
-              
-            </div>
-
-          </div>
-        </div>
+<section className="py-18 lg:py-20 bg-transparent !pb-28 !pt-[110px] md:!pb-36 md:!pt-[132px]">
+  <div className="container mx-auto z-10 sm:px-0 relative">
+    <div className="max-w-[760px] w-fit space-y-6 lg:space-y-10 mx-auto">
+      <div className="relative">
+        <h1 className="relative text-5xl font-light xl:leading-none leading-tight mx-auto sm:leading-[1.1] sm:text-7xl xl:text-[89px] tracking-[-0.89px] font-aeonik text-center">
+          <span className="inline">The future of your industry </span>
+          <span className="highlight text-gradient-2023">starts here.</span>
+        </h1>
       </div>
-      <div>
-        <span className="absolute left-0 top-0">
-          <svg
-            width="495"
-            height="470"
-            viewBox="0 0 495 470"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle
-              cx="55"
-              cy="442"
-              r="138"
-              stroke="white"
-              strokeOpacity="0.04"
-              strokeWidth="50"
-            />
-            <circle
-              cx="446"
-              r="39"
-              stroke="white"
-              strokeOpacity="0.04"
-              strokeWidth="20"
-            />
-            <path
-              d="M245.406 137.609L233.985 94.9852L276.609 106.406L245.406 137.609Z"
-              stroke="white"
-              strokeOpacity="0.08"
-              strokeWidth="12"
-            />
-          </svg>
-        </span>
-        <span className="absolute bottom-0 right-0">
-          <svg
-            width="493"
-            height="470"
-            viewBox="0 0 493 470"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle
-              cx="462"
-              cy="5"
-              r="138"
-              stroke="white"
-              strokeOpacity="0.04"
-              strokeWidth="50"
-            />
-            <circle
-              cx="49"
-              cy="470"
-              r="39"
-              stroke="white"
-              strokeOpacity="0.04"
-              strokeWidth="20"
-            />
-            <path
-              d="M222.393 226.701L272.808 213.192L259.299 263.607L222.393 226.701Z"
-              stroke="white"
-              strokeOpacity="0.06"
-              strokeWidth="13"
-            />
-          </svg>
-        </span>
+      <div className="justify-center lg:pt-4 flex items-center gap-x-6">
+      <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+        Get Started
+      </button>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
   );
 };
 

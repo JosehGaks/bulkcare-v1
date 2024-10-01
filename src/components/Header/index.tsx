@@ -127,11 +127,7 @@ return (
         </p>
         </div>
         <div className="flex justify-end w-full gap-4">
-        <Button variant="ghost" className="hidden md:inline">
-            Book a demo
-        </Button>
         <div className="border-r hidden md:inline"></div>
-        <Button variant="outline">Sign in</Button>
         <Button>Get started</Button>
         </div>
         <div className="flex w-12 shrink lg:hidden items-end justify-end">

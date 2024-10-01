@@ -1,25 +1,46 @@
+"use client";
 import { Feature } from "@/types/feature";
 import { CycleUnits } from "@/types/supportCycleUnits";
+import SpotlightCard from "../ui/spotlight-card";
+import Image from "next/image";
+import { BackgroundGradient } from "../ui/background-gradient";
+import { BackgroundBeams } from "../ui/background-beams";
+
 
 
 const SingleWorkCycle = ({ cycleUnit }: { cycleUnit: CycleUnits }) => {
   const { icon, title, description} = cycleUnit;
   return (
-    <div className="w-full px-4 md:w-1/2 lg:w-1/4">
-      <div className="wow fadeInUp group mb-12" data-wow-delay=".15s">
-        <div className="relative z-10 mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl bg-primary">
-          <span className="absolute left-0 top-0 z-[-1] mb-8 flex h-[70px] w-[70px] rotate-[25deg] items-center justify-center rounded-2xl bg-primary bg-opacity-20 duration-300 group-hover:rotate-45"></span>
+    <SpotlightCard>
+    <BackgroundGradient  className="relative h-full bg-neutral-950 pb-8 rounded-3xl z-20 overflow-hidden p-4">
+      {/* Radial gradient */}
+      <div className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square" aria-hidden="true">
+        <div className="absolute inset-0 translate-z-0 bg-slate-800 rounded-full blur-[80px]"></div>
+      </div>
+      <div className="flex flex-col h-full items-center text-center">
+        {/* Image */}
+        <div className="relative inline-flex">
+          <div className="w-[40%] h-[40%] absolute inset-0 m-auto -translate-y-[10%] blur-3xl -z-10 rounded-full bg-indigo-600" aria-hidden="true"></div>
+          {/* <Image className="inline-flex" src={Card03} width={200} height={200} alt="Card 03" /> */}
           {icon}
         </div>
-        <h3 className="mb-3 text-xl font-bold text-dark dark:text-white">
-          {title}
-        </h3>
-        <p className="mb-8 text-body-color dark:text-dark-6 lg:mb-11">
-          {description}
-        </p>
+        {/* Text */}
+        <div className="grow mb-5">
+          <h2 className="text-xl text-slate-200 font-bold mb-1">{title}</h2>
+          <p className="text-sm text-slate-500">{description}</p>
+        </div>
+        {/* <a className="inline-flex justify-center items-center whitespace-nowrap rounded-lg bg-slate-800 hover:bg-slate-900 border border-slate-700 px-3 py-1.5 text-sm font-medium text-slate-300 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150" href="#0">
+          <svg className="fill-slate-500 mr-2" xmlns="http://www.w3.org/2000/svg" width="16" height="14">
+            <path d="M12.82 8.116A.5.5 0 0 0 12 8.5V10h-.185a3 3 0 0 1-2.258-1.025l-.4-.457-1.328 1.519.223.255A5 5 0 0 0 11.815 12H12v1.5a.5.5 0 0 0 .82.384l3-2.5a.5.5 0 0 0 0-.768l-3-2.5ZM12.82.116A.5.5 0 0 0 12 .5V2h-.185a5 5 0 0 0-3.763 1.708L3.443 8.975A3 3 0 0 1 1.185 10H1a1 1 0 1 0 0 2h.185a5 5 0 0 0 3.763-1.708l4.609-5.267A3 3 0 0 1 11.815 4H12v1.5a.5.5 0 0 0 .82.384l3-2.5a.5.5 0 0 0 0-.768l-3-2.5ZM1 4h.185a3 3 0 0 1 2.258 1.025l.4.457 1.328-1.52-.223-.254A5 5 0 0 0 1.185 2H1a1 1 0 0 0 0 2Z" />
+          </svg>
+          <span>Connect</span>
+        </a> */}
       </div>
-    </div>
-  );
-};
+      <BackgroundBeams />
+    </BackgroundGradient >
+  </SpotlightCard>
 
-export default SingleWorkCycle;
+  )
+}
+
+export default SingleWorkCycle

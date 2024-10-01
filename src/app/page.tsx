@@ -35,9 +35,11 @@ export default function Home() {
       <ScrollUp />
       {/* <Hero /> */}
       <Hero/>
-      <WorkCycle/>
-      <Features />
       <Services />
+      <WorkCycle/>
+      <CallToAction />
+      <Features />
+      
       <Steps/>
       <BenefitsStack/>
       {/* <About /> */}

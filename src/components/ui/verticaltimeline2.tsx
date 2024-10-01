@@ -1,4 +1,5 @@
 import { Caveat } from 'next/font/google'
+import { CardSpotlight } from './card-spotlight'
 
 const caveat = Caveat({
   subsets: ['latin'],
@@ -33,12 +34,12 @@ export default function VerticalTimeline02({ items }: { items: TimelineItemProps
             )}
           </div>
           {/* Card */}
-          <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded border border-slate-200 shadow">
+          <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded border border-slate-200 shadow rounded-xl">
             <div className="flex items-center justify-between space-x-2 mb-1">
-              <div className="font-bold text-slate-900">{item.title}</div>
+              <div className="font-bold dark:text-white text-black text-xl">{item.title}</div>
               <time className={`font-medium ${item.completed ? 'text-indigo-500' : 'text-amber-500'}`}>{!item.completed && 'Exp. '}{item.date}</time>
             </div>
-            <div className="text-slate-500">{item.content}</div>
+            <div className="dark:text-white text-black">{item.content}</div>
           </div>
         </div>
       ))}
