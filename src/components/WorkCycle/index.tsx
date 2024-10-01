@@ -5,7 +5,7 @@ import { BackgroundGradient } from "../ui/background-gradient";
 import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
 import Spotlight, { SpotlightCard } from "../ui/spotlight-card";
 import workCycleData from "./workCycleData";
-import SingleWorkCycle from "./SingleWorkCycle";
+import SingleWorkCycle from "./Cycle";
 
 const WorkCycle = () => {
   return (
