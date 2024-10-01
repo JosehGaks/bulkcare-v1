@@ -11,7 +11,7 @@ import BenefitsStack from "@/components/FeaturesBenefits/BenefitsStack";
 import BentoBenefits from "@/components/FeaturesBenefits/SingleFeatureBenefit";
 import Benefits from "@/components/FeaturesBenefits/SingleFeatureBenefit";
 import BentoGridBenefits from "@/components/FeaturesBenefits/SingleFeatureBenefit";
-import { Hero } from "@/components/Hero";
+import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
 import PulseBeam from "@/components/PulseBeam";
 import Services from "@/components/Services";
@@ -32,7 +32,6 @@ export default function Home() {
 
   return (
     <main className="dark:bg-black bg-white  dark:bg-dot-white/[0.2] bg-dot-black/[0.2]">
-      <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
       <ScrollUp />
       {/* <Hero /> */}
       <Hero/>
