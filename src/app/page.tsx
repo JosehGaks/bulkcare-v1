@@ -1,8 +1,10 @@
+import Banner from "@/components/banner";
 import HomeBlogSection from "@/components/Blog/HomeBlogSection";
 import CallToAction from "@/components/CallToAction";
 import Clients from "@/components/Clients";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
+import FAQ from "@/components/Faq";
 import Faq from "@/components/Faq";
 import Features from "@/components/Features";
 import BenefitsStack from "@/components/FeaturesBenefits/BenefitsStack";
@@ -24,12 +26,13 @@ export default function Home() {
   const posts = getAllPosts(["title", "date", "excerpt", "coverImage", "slug"]);
 
   return (
-    <main className="dark:bg-black bg-white  dark:bg-dot-white/[0.2] bg-dot-black/[0.2]">
+    <main className="">
       <ScrollUp />
       {/* <Hero /> */}
-      <Hero/>
-      <Services />
+      <Banner/>
       <WorkCycle/>
+      <Services />
+
       <CallToAction />
       <Features />
       
@@ -41,7 +44,7 @@ export default function Home() {
       {/* <Pricing /> */}
       <Clients />
       <Testimonials />
-      <Faq />
+      <FAQ />
       {/* <Team /> */}
       <HomeBlogSection posts={posts} />
       <Contact />

@@ -1,60 +1,41 @@
-// components/Banner.js
-import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+import { ChevronRight } from "lucide-react";
+import HeroAnimated from "../ui/HeroAnimated";
+import LinkItem from "../LinkItem";
 
 const Banner = () => {
   return (
     <>
-    <section
-      id="home"
-      className="relative overflow-hidden bg-primary pt-[150px] md:pt-[130px] lg:pt-[160px]"
-    >
-    <div className="home-5-banner bg-gray-100">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="md:w-1/2">
-            <div className="text-left mb-8 md:mb-0">
-              <h4 className="text-2xl font-semibold mb-2">YOUR BULKCARE</h4>
-              <h1 className="text-4xl font-bold mb-4">
-                <span className="block">Amazing Customer</span>
-                <span className="block">Experiences.</span>
-                <span className="block text-teal-500">Together.</span>
-              </h1>
-              <p className="text-lg mb-6">
-                We are a digitally enabled People as a Services Outsourcer focused on serving high growth, new economy, market-disrupting, and technology companies to own interaction custody, complete complex tasks, and grow their brands.
-              </p>
+      <section className="relative mt-0 min-h-[600px] w-full py-20">
+        <div className="-z-1 absolute inset-0 h-[600px] w-full bg-transparent bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem] opacity-15 [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
+        <img
+          className="absolute inset-x-0 -top-20 opacity-75"
+          src={
+            "https://pipe.com/_next/image?url=%2Fassets%2Fimg%2Fhero-left.png&w=384&q=75"
+          }
+          width={1000}
+          height={1000}
+          alt="back bg"
+        />
+        <div className="relative z-10 mx-auto container translate-y-[33%] space-y-6">
+          <HeroAnimated
+            header="Exceptional Customer Support Outsourcing"
+            headerClassName="text-center max-w-5xl text-5xl md:text-6xl tracking-tighter mx-auto lg:text-7xl font-bold font-geist font-normal text-transparent bg-clip-text bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)] leading-0 md:leading-0 md:pb-5 mt-1"
+            description="Let BulkCare manage your customer support with a highly trained team, allowing you to focus on your core business. Scalable, reliable, and personalized service, tailored to meet your needs."
+            descriptionClassName="mx-auto text-zinc-400 text-center text-md lg:max-w-2xl md:py-5"
+          >
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              <LinkItem
+                href="/services"
+                variant="default"
+                className="group inline-flex w-full items-center justify-center border-[1px] border-input bg-transparent bg-gradient-to-tr from-zinc-300/5 via-gray-400/5 to-transparent px-10 py-4 text-center transition-colors hover:bg-transparent/10 sm:w-auto"
+              >
+                Explore Services
+                <ChevronRight className="ml-2 h-4 w-4 duration-300 group-hover:translate-x-1" />
+              </LinkItem>
             </div>
-            <div>
-              <Link href="https://www.helpware.com/contact-us">
-                <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300">
-                  Let&apos;s Talk
-                </button>
-              </Link>
-            </div>
-          </div>
-          <div className="md:w-1/2 flex flex-col items-center relative pt-11">
-            <div className="mb-8">
-              <video id="vid" width="320" height="240" playsInline loop muted autoPlay >
-                <source src="https://f.hubspotusercontent20.net/hubfs/3358429/Helpware-hero-video-02222022_v3.mp4" type="video/mp4" />
-              </video>
-              <Image src={'/images/hero/bulk_customer_care.webp'} alt="discount" fill className='object-cover'/>
-            </div>
-            <div className="text-center absolute bottom-0 right-12 transform -translate-x-1/2 bg-white p-3 rounded-2xl shadow-2xl">
-              <div className="mb-4">
-                <img src="https://www.helpware.com/hubfs/image%2067%20(1).png" alt="Taylor Spencer" className="w-24 h-24 rounded-full mx-auto" />
-              </div>
-              <h5 className="text-xl font-semibold mb-2">Taylor Spencer</h5>
-              <div className="flex justify-center space-x-4">
-                <img src="https://www.helpware.com/hubfs/Answer-yes-icon.svg" alt="Answer-yes-icon" className="w-6 h-6" />
-                <img src="https://www.helpware.com/hubfs/Answer-no-icon.svg" alt="Answer-no-icon" className="w-6 h-6" />
-              </div>
-            </div>
-          </div>
+          </HeroAnimated>
         </div>
-      </div>
-    </div>
-    </section>
+      </section>
     </>
   );
 };

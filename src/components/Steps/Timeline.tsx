@@ -54,13 +54,9 @@ export default function VerticalTimeline() {
       <section className="relative h-full mt-6 flex flex-col justify-center bg-slate-50 dark:bg-black overflow-hidden py-10">
         <div className="w-full container mx-auto px-4 md:px-6">
           <div className="flex flex-col justify-center divide-y divide-slate-200 [&>*]:py-16">
-
             <div className="w-full max-w-3xl mx-auto">
               <VerticalTimeline02 items={timelineItems} />
             </div>
-
-                                
-
           </div>
         </div>
       </section>

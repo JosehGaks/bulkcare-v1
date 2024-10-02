@@ -1,107 +1,109 @@
 'use client'
 import React, { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Plus } from 'lucide-react'
+import { Mail, Plus } from 'lucide-react'
 import SectionTitle from '../Common/SectionTitle';
+import { Separator } from '../ui/separator';
  
 
-const faqs = [
-  {
-    question: "What is Bulk Care Customer Support?",
-    answer: "Bulk Care Customer Support is a professional outsourcing service that provides businesses with efficient and secure customer support solutions. We handle all your customer interactions, ensuring high satisfaction and loyalty."
-  },
-  {
-    question: "What communication channels does Bulk Care support?",
-    answer: "Bulk Care offers comprehensive support across every communication channel, including phone, email, live chat, and social media, ensuring your customers can reach you whenever and however they prefer."
-  },
-  {
-    question: "How can Bulk Care help reduce operational costs?",
-    answer: "By outsourcing your customer support to Bulk Care, you can significantly reduce operational costs. We eliminate the need for in-house training, infrastructure, and staffing, allowing you to allocate resources more efficiently."
-  },
-  {
-    question: "Is Bulk Care available 24/7?",
-    answer: "Yes, Bulk Care provides 24/7 support, ensuring your customers receive assistance whenever they need it. Our around-the-clock availability enhances customer satisfaction and loyalty."
-  },
-  {
-    question: "What industries does Bulk Care serve?",
-    answer: "Bulk Care serves a wide range of industries, including technology, retail, healthcare, finance, and more. Our team of experts is equipped to handle the unique needs of different business sectors."
-  },
-  {
-    question: "How does Bulk Care ensure high-quality support?",
-    answer: "Bulk Care ensures high-quality support through continuous monitoring, regular training, and the use of advanced customer support technologies. Our quality assurance processes are designed to maintain the highest standards of service."
-  },
-  {
-    question: "Can Bulk Care support multiple languages?",
-    answer: "Yes, Bulk Care offers support in multiple languages, making your services accessible to a global customer base. We help you break down language barriers and expand your market reach."
-  }
-];
 
-function Index() {
-  const [activeIndex, setActiveIndex] = useState<number | null>(0)
-  const [activeItem, setActiveItem] = useState<
-    | {
-        question: string
-        answer: string
-      }
-    | undefined
-  >(faqs[0])
- 
-  const handleClick = async (index: number) => {
-    setActiveIndex(activeIndex === index ? null : index)
-    const newActiveItem = faqs.find((_, i) => i === index)
-    setActiveItem(newActiveItem)
-  }
- 
+export default function FAQ() {
+
+  const faqs = [
+    {
+      question: "What is Bulk Care Customer Support?",
+      answer: "Bulk Care Customer Support is a professional outsourcing service that provides businesses with efficient and secure customer support solutions. We handle all your customer interactions, ensuring high satisfaction and loyalty."
+    },
+    {
+      question: "What communication channels does Bulk Care support?",
+      answer: "Bulk Care offers comprehensive support across every communication channel, including phone, email, live chat, and social media, ensuring your customers can reach you whenever and however they prefer."
+    },
+    {
+      question: "How can Bulk Care help reduce operational costs?",
+      answer: "By outsourcing your customer support to Bulk Care, you can significantly reduce operational costs. We eliminate the need for in-house training, infrastructure, and staffing, allowing you to allocate resources more efficiently."
+    },
+    {
+      question: "Is Bulk Care available 24/7?",
+      answer: "Yes, Bulk Care provides 24/7 support, ensuring your customers receive assistance whenever they need it. Our around-the-clock availability enhances customer satisfaction and loyalty."
+    },
+    {
+      question: "What industries does Bulk Care serve?",
+      answer: "Bulk Care serves a wide range of industries, including technology, retail, healthcare, finance, and more. Our team of experts is equipped to handle the unique needs of different business sectors."
+    },
+    {
+      question: "How does Bulk Care ensure high-quality support?",
+      answer: "Bulk Care ensures high-quality support through continuous monitoring, regular training, and the use of advanced customer support technologies. Our quality assurance processes are designed to maintain the highest standards of service."
+    },
+    {
+      question: "Can Bulk Care support multiple languages?",
+      answer: "Yes, Bulk Care offers support in multiple languages, making your services accessible to a global customer base. We help you break down language barriers and expand your market reach."
+    }
+  ];
+
   return (
-    <>
-      <div className="container mx-auto pb-10 pt-20">
-        <SectionTitle title='FAQ' subtitle='Frequently Asked Questions' paragraph=''/>
-        <div className="h-fit border  rounded-lg pt-10 ">
-          {faqs.map((faq, index) => (
-            <motion.div
-              key={index}
-              className={`overflow-hidden ${
-                index !== faqs.length - 1 ? 'border-b' : ''
-              }`}
-              onClick={() => handleClick(index)}
+    <section className="relative">
+      <img
+        className="absolute inset-x-0 -top-20 opacity-25 "
+        src={
+          "https://pipe.com/_next/image?url=%2Fassets%2Fimg%2Fhero-left.png&w=384&q=75"
+        }
+        width={1000}
+        height={1000}
+        alt="back bg"
+      />
+
+      <div className="absolute -z-1 inset-0  h-[600px] w-full bg-transparent opacity-5 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
+
+      <div className="pt-10 container mx-auto px-4 md:px-8">
+        <div className="space-y-5 sm:text-left sm:max-w-md sm:mr-auto">
+          <h3 className="text-gray-300 font-geist text-3xl font-extrabold sm:text-4xl">
+            How can we help?
+          </h3>
+          <p className="text-gray-100">
+            Everything you need to know about the product. Can’t find the answer
+            you’re looking for? feel free to{" "}
+            <a
+              className="text-cyan-700 font-semibold whitespace-nowrap"
+              href="javascript:void(0)"
             >
-              <button
-                className={`p-3 px-2 w-full cursor-pointer items-center transition-all font-semibold dark:text-white text-black   flex gap-2 
-               `}
-              >
-                <Plus
-                  className={`${
-                    activeIndex === index ? 'rotate-45' : 'rotate-0 '
-                  } transition-transform ease-in-out w-5 h-5 dark:text-gray-200 text-gray-600`}
-                />
-                {faq.question}
-              </button>
-              <AnimatePresence mode="sync">
-                {activeIndex === index && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{
-                      duration: 0.3,
-                      ease: 'easeInOut',
-                      delay: 0.14,
-                    }}
-                  >
-                    <p
-                      className={`dark:text-white text-black p-3 pt-0 w-[90%]`}
-                    >
-                      {faq.answer}
-                    </p>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.div>
-          ))}
+              contact us
+            </a>
+            .
+          </p>
+          <form
+            onSubmit={(e) => e.preventDefault()}
+            className="mx-auto sm:mx-auto "
+          >
+            <div className="relative">
+              <Mail className="w-6 h-6 text-gray-500 absolute left-3 inset-y-0 my-auto" />
+              <input
+                type="text"
+                placeholder="Enter your email"
+                className="w-full pl-12 pr-3 py-2 text-gray-200 bg-transparent outline-none border focus:border-cyan-600 shadow-sm rounded-lg"
+              />
+            </div>
+          </form>
+        </div>
+        <Separator className="h-[1px] bg-white/10 mt-4" />
+        <div className="mt-12">
+          <ul className="space-y-8 gap-12 grid-cols-2 sm:grid sm:space-y-0 lg:grid-cols-3">
+            {faqs.map((item, idx) => (
+              <li key={idx} className="space-y-3">
+                <summary className="flex items-center justify-between font-semibold text-gray-500">
+                  {item.question}
+                </summary>
+                <p
+                  dangerouslySetInnerHTML={{ __html: item.answer }}
+                  className="text-gray-200 leading-relaxed"
+                ></p>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
-    </>
-  )
+    </section>
+  );
 }
- 
-export default Index
+
+
+            
