@@ -17,7 +17,7 @@ function Clients() {
   return (
     <>
       <div className="overflow-hidden bg-black pt-20">
-        <div className="mx-auto mt-32 w-screen max-w-2xl">
+        <div className="container mx-auto mt-32 w-screen">
           <div className="text-center text-3xl text-white">
             <span className="text-indigo-200">Trusted by experts.</span>
 

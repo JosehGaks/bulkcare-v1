@@ -1,22 +1,14 @@
-import Breadcrumb from "@/components/Common/Breadcrumb";
-import Faq from "@/components/Faq";
-import Pricing from "@/components/Pricing";
-import { Metadata } from "next";
+import React from 'react'
+import PricingComparisonTable from './PricingComparisonTable'
+import RawPricing from './RawPricing'
 
-export const metadata: Metadata = {
-  title:
-    "Pricing Page | Play SaaS Starter Kit and Boilerplate for Next.js",
-  description: "This is pricing page description",
-};
-
-const PricingPage = () => {
+const page = () => {
   return (
     <>
-      <Breadcrumb pageName="Pricing Page" />
-      <Pricing />
-      <Faq />
+    <PricingComparisonTable/>
+    <RawPricing/>
     </>
-  );
-};
+  )
+}
 
-export default PricingPage;
+export default page

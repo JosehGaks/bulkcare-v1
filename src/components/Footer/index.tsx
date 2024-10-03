@@ -180,7 +180,7 @@ const Footer = () => {
               <h4 className="mb-9 text-lg font-semibold text-white">
                 Our Products
               </h4>
-              <ul>
+              {/* <ul>
                 <li>
                   <a
                     href="/#"
@@ -213,7 +213,7 @@ const Footer = () => {
                     PlainAdmin
                   </a>
                 </li>
-              </ul>
+              </ul> */}
             </div>
           </div>
           <div className="w-full px-4 md:w-2/3 lg:w-6/12 xl:w-3/12">
@@ -292,7 +292,7 @@ const Footer = () => {
                 <p className="text-base text-gray-7">
                   Designed and Developed by{" "}
                   <a
-                    href="https://tailgrids.com"
+                    href="/#"
                     rel="nofollow noopner noreferrer"
                     target="_blank"
                     className="text-gray-1 hover:underline"

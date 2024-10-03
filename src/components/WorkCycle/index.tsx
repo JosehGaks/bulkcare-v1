@@ -10,11 +10,16 @@ import SingleWorkCycle from "./Cycle";
 const WorkCycle = () => {
 
   return (
-    <section className="py-14 mt-16 relative">
-      <img
-        src="https://tailwindcss.com/_next/static/media/docs@30.8b9a76a2.avif"
-        className="absolute z-2 -top-0 left-10"
-      />
+    <section className="py-20 mt-16 relative">
+<img
+          className="absolute inset-x-0 -top-20 opacity-75"
+          src={
+            "https://tailwindcss.com/_next/static/media/docs@30.8b9a76a2.avif"
+          }
+          width={1000}
+          height={1000}
+          alt="back bg"
+        />
       <div className="max-w-screen-xl mx-auto px-4 text-gray-400 md:px-8">
         <div className="relative max-w-2xl mx-auto sm:text-center">
           <div className="relative z-10">

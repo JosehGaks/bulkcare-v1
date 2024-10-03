@@ -36,10 +36,12 @@ import {
   DollarSign,
   BookOpen,
 } from 'lucide-react';
+import Image from 'next/image';
 
 const ListItem = ({ className, title, children, icon: Icon, ...props }:any) => {
   return (
     <li>
+      <Link href={props.href}>
       <NavigationMenuLink asChild>
         <a
           className={cn(
@@ -57,6 +59,7 @@ const ListItem = ({ className, title, children, icon: Icon, ...props }:any) => {
           </p>
         </a>
       </NavigationMenuLink>
+      </Link>
     </li>
   );
 };
@@ -78,10 +81,10 @@ export default function Navbar() {
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
       isScrolled ? "bg-background/80 backdrop-blur-sm shadow" : "bg-transparent"
     )}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="Container mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
-            <img className="h-8 w-auto" src="/placeholder.svg?height=32&width=32" alt="BulkCare" />
+            <Image className="" src="/images/logo/logo.svg" alt="BulkCare" height={150} width={150}/>
           </div>
           <div className="hidden sm:flex sm:items-center sm:justify-center flex-grow">
             <NavigationMenu>
@@ -90,25 +93,25 @@ export default function Navbar() {
                   <NavigationMenuTrigger>Services</NavigationMenuTrigger>
                   <NavigationMenuContent className="z-50">
                     <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-2">
-                      <ListItem title="Digital Customer Experience" icon={Laptop}>
+                      <ListItem title="Digital Customer Experience" icon={Laptop} href="/services/digital-customer-experience">
                         Enhance your customer experiences across all channels
                       </ListItem>
-                      <ListItem title="Content Control & Verification" icon={ShieldCheck}>
+                      <ListItem title="Content Control & Verification" icon={ShieldCheck} href="/services/content-control-and-verification">
                         Enable a safe environment and trusted brand
                       </ListItem>
-                      <ListItem title="AI Customer Service" icon={Bot}>
+                      <ListItem title="AI Customer Service" icon={Bot} href="/services/ai-customer-service">
                         Faster, better, and more efficient customer support experiences
                       </ListItem>
-                      <ListItem title="Back-office Support" icon={Briefcase}>
+                      <ListItem title="Back-office Support" icon={Briefcase} href="/services/back-office-support">
                         Extend your team with culturally aligned, global teams
                       </ListItem>
-                      <ListItem title="Human in the loop (HITL)" icon={Users}>
+                      <ListItem title="Human in the loop (HITL)" icon={Users} href="/services/human-in-the-loop">
                         Transform critical human connections in your technology loop
                       </ListItem>
-                      <ListItem title="Digital Marketing Support" icon={BarChart}>
+                      <ListItem title="Digital Marketing Support" icon={BarChart} href="/services/digital-marketing-support">
                         Drive better marketing results with precision
                       </ListItem>
-                      <ListItem title="Software Development" icon={Code}>
+                      <ListItem title="Software Development" icon={Code} href="/services/software-development">
                         Convert your ideas into impactful digital solutions
                       </ListItem>
                     </ul>
@@ -118,22 +121,22 @@ export default function Navbar() {
                   <NavigationMenuTrigger>Industries</NavigationMenuTrigger>
                   <NavigationMenuContent className="z-50">
                     <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-2">
-                      <ListItem title="Ecommerce & Retail" icon={ShoppingCart}>
+                      <ListItem title="Ecommerce & Retail" icon={ShoppingCart} href="/industries/ecommerce-and-retail">
                         Meet your customers with a personalized journey
                       </ListItem>
                       <ListItem title="SaaS & Software" icon={Cloud}>
                         Exceed customer needs and expand business opportunities
                       </ListItem>
-                      <ListItem title="HealthCare & HealthTech" icon={Activity}>
+                      <ListItem title="HealthCare & HealthTech" icon={Activity} href="/industries/healthcare-and-healthtech">
                         Drive growth and advance patient experience
                       </ListItem>
-                      <ListItem title="Gaming & Entertainment" icon={Gamepad2}>
+                      <ListItem title="Gaming & Entertainment" icon={Gamepad2} href="/industries/gaming-and-entertainment">
                         Take the lead in customer choice and service expectations
                       </ListItem>
-                      <ListItem title="FinTech" icon={Banknote}>
+                      <ListItem title="FinTech" icon={Banknote} href="/industries/fintech">
                         Provide secure solutions that protect users and meet regulations
                       </ListItem>
-                      <ListItem title="Automotive" icon={Car}>
+                      <ListItem title="Automotive" icon={Car} href="/industries/automotive">
                         Leverage our expertise for tailored automobile solutions
                       </ListItem>
                     </ul>
@@ -143,36 +146,21 @@ export default function Navbar() {
                   <NavigationMenuTrigger>Locations</NavigationMenuTrigger>
                   <NavigationMenuContent className="z-50">
                     <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-2">
-                      <ListItem title="BulkCare USA" icon={MapPin}>
-                        Scalable US-based native English speakers
-                      </ListItem>
-                      <ListItem title="BulkCare Mexico" icon={MapPin}>
-                        Highly-educated, scalable talent pool
-                      </ListItem>
-                      <ListItem title="BulkCare Germany" icon={MapPin}>
-                        Non-scalable native-speaker teams
-                      </ListItem>
-                      <ListItem title="BulkCare Philippines" icon={MapPin}>
-                        Multilingual, scalable teams
-                      </ListItem>
-                      <ListItem title="BulkCare Uganda" icon={MapPin}>
+                      <ListItem title="BulkCare Kenya" icon={MapPin} href="/locations/kenya">
                         Skillful, scalable talent pool
-                      </ListItem>
-                      <ListItem title="BulkCare at Home" icon={Globe}>
-                        Our WFH option benefits for clients and team members
                       </ListItem>
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    <ListItem title="Pricing" icon={DollarSign} />
+                    <ListItem title="Pricing" icon={DollarSign} href="/pricing"/>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <Link href="/insights" legacyBehavior passHref>
                     <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                      <ListItem title="Insights" icon={BookOpen} />
+                      <ListItem title="Insights" icon={BookOpen} href="/insights"/>
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
@@ -198,15 +186,12 @@ export default function Navbar() {
                         <NavigationMenuTrigger>Services</NavigationMenuTrigger>
                         <NavigationMenuContent className="z-50">
                           <ul className="grid gap-3 p-6 md:w-[400px]">
-                            <ListItem title="Digital Customer Experience" icon={Laptop} />
-                            <ListItem title="Content Control & Verification" icon={ShieldCheck} />
-                            <ListItem title="AI Customer Service" icon={Bot} />
-                            <ListItem title="Back-office Support" icon={Briefcase} />
-                            <ListItem title="Data Labeling" icon={Database} />
-                            <ListItem title="Human in the loop (HITL)" icon={Users} />
-                            <ListItem title="Digital Marketing Support" icon={BarChart} />
-                            <ListItem title="Cybersecurity" icon={Lock} />
-                            <ListItem title="Software Development" icon={Code} />
+                            <ListItem title="Digital Customer Experience" icon={Laptop} href="/services/digital-customer-experience"/>
+                            <ListItem title="Content Control & Verification" icon={ShieldCheck} href="/services/content-control-and-verification"/>
+                            <ListItem title="AI Customer Service" icon={Bot} href="/services/ai-customer-service"/>
+                            <ListItem title="Back-office Support" icon={Briefcase} href="/services/back-office-support"/>
+                            <ListItem title="Human in the loop (HITL)" icon={Users} href="/services/human-in-the-loop"/>
+                            <ListItem title="Digital Marketing Support" icon={BarChart} href="/services/digital-marketing-support"/>
                           </ul>
                         </NavigationMenuContent>
                       </NavigationMenuItem>
@@ -214,12 +199,11 @@ export default function Navbar() {
                         <NavigationMenuTrigger>Industries</NavigationMenuTrigger>
                         <NavigationMenuContent className="z-50">
                           <ul className="grid gap-3 p-6 md:w-[400px]">
-                            <ListItem title="Ecommerce & Retail" icon={ShoppingCart} />
-                            <ListItem title="SaaS & Software" icon={Cloud} />
-                            <ListItem title="HealthCare & HealthTech" icon={Activity} />
-                            <ListItem title="Gaming & Entertainment" icon={Gamepad2} />
-                            <ListItem title="FinTech" icon={Banknote} />
-                            <ListItem title="Automotive" icon={Car} />
+                            <ListItem title="Ecommerce & Retail" icon={ShoppingCart} href="/industries/ecommerce-and-retail"/>
+                            <ListItem title="SaaS & Software" icon={Cloud} href="/industries/saas-and-software"/>
+                            <ListItem title="HealthCare & HealthTech" icon={Activity} href="/industries/healthcare-and-healthtech"/>
+                            <ListItem title="Gaming & Entertainment" icon={Gamepad2} href="/industries/gaming-and-entertainment"/>
+                            <ListItem title="FinTech" icon={Banknote} href="/industries/fintech"/>
                           </ul>
                         </NavigationMenuContent>
                       </NavigationMenuItem>
@@ -227,21 +211,16 @@ export default function Navbar() {
                         <NavigationMenuTrigger>Locations</NavigationMenuTrigger>
                         <NavigationMenuContent className="z-50">
                           <ul className="grid gap-3 p-6 md:w-[400px]">
-                            <ListItem title="BulkCare USA" icon={MapPin} />
-                            <ListItem title="BulkCare Mexico" icon={MapPin} />
-                            <ListItem title="BulkCare Germany" icon={MapPin} />
-                            <ListItem title="BulkCare Philippines" icon={MapPin} />
-                            <ListItem title="BulkCare Uganda" icon={MapPin} />
-                            <ListItem title="BulkCare at Home" icon={Globe} />
+                            <ListItem title="BulkCare Kenya" icon={MapPin} href="/locations/kenya"/>
                           </ul>
                         </NavigationMenuContent>
                       </NavigationMenuItem>
                       <NavigationMenuItem>
-                        <ListItem title="Pricing" icon={DollarSign} />
+                        <ListItem title="Pricing" icon={DollarSign} href="/pricing"/>
                       </NavigationMenuItem>
                       <NavigationMenuItem>
                         <Link href="/insights" legacyBehavior passHref>
-                          <ListItem title="Insights" icon={BookOpen} />
+                          <ListItem title="Insights" icon={BookOpen} href="/blog"/>
                         </Link>
                       </NavigationMenuItem>
                     </NavigationMenuList>

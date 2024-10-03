@@ -39,7 +39,7 @@ export default function PulseBeam() {
           <Circle ref={div2Ref} className="p-2">
             <IconBrandFacebook className='dark:text-black'/>
           </Circle>
-          <Circle ref={div4Ref} className="h-16 w-16 p-3">
+          <Circle ref={div4Ref} className="h-20 w-20 p-1">
             <Image src={"/images/logo/logo.svg"} alt="logo" width={500} height={800}/>
           </Circle>
           <Circle ref={div6Ref} className="p-2">
