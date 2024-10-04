@@ -80,6 +80,7 @@ const page = () => {
         content="
 We are here to make customers happy and now it’s easier to do with our new AI solutions. They help us refine every aspect of customer interactions, automating processes and maximizing efficiency. Our solutions don't just respond to your needs; they anticipate them. Stay ahead, stay connected, and drive success with Bulkcare AI СX solutions!"
         action="Embrace the future!"
+        imgSrc="/images/services/ai.png"
       />
       <Stats stats={stats} />
       <Feature

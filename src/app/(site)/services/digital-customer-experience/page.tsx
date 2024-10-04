@@ -113,6 +113,7 @@ const page = () => {
         subtitle="Digital Customer Experience"
         content="Customers expectations are changing — we level up the experience."
         action="Expand your customer support"
+        imgSrc="/images/services/customer_service.png"
       />
       <Stats stats={stats} />
       <Feature

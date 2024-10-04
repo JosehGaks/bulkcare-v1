@@ -56,6 +56,7 @@ const page = () => {
         subtitle="Gaming & Entertainment"
         content={`You want a strong connection with your users, which requires creating a positive product experience. User experience demands frontline support and quality. We go beyond gaming customer service, marketing, technology, and analytics to bring a culture that increases your user satisfaction and growth.`}
         action="Get More Customers"
+        imgSrc='/images/industries/casino.png'
       />
       <IndustryChallengeHero title={'INDUSTRY CHALLENGES'} subtitle={'What’s top of mind for leaders in the gaming and entertainment industry?'} 
         paragraph={`

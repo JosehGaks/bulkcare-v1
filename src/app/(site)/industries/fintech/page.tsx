@@ -62,6 +62,7 @@ const page = () => {
         subtitle="FinTech"
         content= {`You want a secure solution that uses modern technology, protects users, and meets industry regulations while creating customer satisfaction and loyalty. FinTech customers demand data security, risk mitigation,  support, and quality. We go beyond customer service, data security, marketing, technology, and analytics support to bring a culture that increases your customer satisfaction and growth.`}
         action="Get More Customers"
+        imgSrc='/images/industries/fintech.gif'
       />
       <IndustryChallengeHero title={'INDUSTRY CHALLENGES'} subtitle={'What’s top of mind for leaders in the FinTech industry?'} paragraph={`
         Mitigating risk while maximizing customer experience to drive brand loyalty.

@@ -65,6 +65,7 @@ Bulkcare also supports clinical services with efficient resources in digital con
         subtitle="Healthcare & HealthTech"
         content={`You want to drive growth at scale, advance patient experience and engagement and accelerate digital solutions.  We go beyond business process outsourcing, tools, and digital technology and bring the culture that helps drive your growth strategy.`}
         action="Get More Customers"
+        imgSrc='/images/industries/healthcare.png'
       />
       <IndustryChallengeHero title={'INDUSTRY CHALLENGES'} subtitle={'What’s top of mind for leaders in the Healthcare industry?'} paragraph={`
         Advancing patient experiences, developing growth at scale, and accelerating the right digital technology solution to support these efforts.

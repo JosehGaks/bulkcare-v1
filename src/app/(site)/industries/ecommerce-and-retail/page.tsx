@@ -59,6 +59,7 @@ const page = () => {
         content=" 
 You want to meet your customers where they are with a personalized journey that creates brand ambassadors. We go beyond eCommerce customer service, tools, and digital technology and bring the culture that increases your buyer community."
         action="Get More Customers"
+        imgSrc='/images/industries/ecomerce.png'
       />
       <IndustrySolutions tabs={tabs} />
       <WhyUs/>

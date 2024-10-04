@@ -119,6 +119,7 @@ const page = () => {
         subtitle="Bulkcare Media"
         content="Drive better marketing results by leveraging our in-house Bulkcare experts who execute every engagement with precision and high performance. We’ve hand-picked our internal team for marketing skills and expertise and they’re the best in the business. You can boost your marketing success and consistently drive desired outcomes by partnering with our team."
         action="Increase Marketing Results"
+        imgSrc="/images/services/marketing.png"
       />
       <Stats stats={stats} />
       <Feature

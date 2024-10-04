@@ -107,6 +107,7 @@ const page = () => {
         content=" Our interconnected and platform-driven world is transforming the traditional definition of both services and experience. However, one constant will remain. There will always be humans in the loop. Bulkcare is transforming and integrating this journey. Regardless of task type or interaction, we are that critical human connection within your loop of technology, communication, and services.
         "
         action="Synergize People and Data"
+        imgSrc="/images/services/human_in_the_loop.png"
       />
       <Stats stats={stats} />
       <Feature

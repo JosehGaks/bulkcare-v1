@@ -114,9 +114,6 @@ export default function Navbar() {
                       <ListItem title="Digital Marketing Support" icon={BarChart} href="/services/digital-marketing-support">
                         Drive better marketing results with precision
                       </ListItem>
-                      <ListItem title="Software Development" icon={Code} href="/services/software-development">
-                        Convert your ideas into impactful digital solutions
-                      </ListItem>
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
@@ -127,7 +124,7 @@ export default function Navbar() {
                       <ListItem title="Ecommerce & Retail" icon={ShoppingCart} href="/industries/ecommerce-and-retail">
                         Meet your customers with a personalized journey
                       </ListItem>
-                      <ListItem title="SaaS & Software" icon={Cloud}>
+                      <ListItem title="SaaS & Software" icon={Cloud} href="/industries/saas-and-software">
                         Exceed customer needs and expand business opportunities
                       </ListItem>
                       <ListItem title="HealthCare & HealthTech" icon={Activity} href="/industries/healthcare-and-healthtech">
@@ -138,9 +135,6 @@ export default function Navbar() {
                       </ListItem>
                       <ListItem title="FinTech" icon={Banknote} href="/industries/fintech">
                         Provide secure solutions that protect users and meet regulations
-                      </ListItem>
-                      <ListItem title="Automotive" icon={Car} href="/industries/automotive">
-                        Leverage our expertise for tailored automobile solutions
                       </ListItem>
                     </ul>
                   </NavigationMenuContent>

@@ -82,7 +82,7 @@ const page = () => {
 
       Leading companies in the industry understand the importance of staying ahead of these challenges. Partnering with BulkCare provides access to expert customer support solutions that seamlessly integrate into your gaming platform. We ensure real-time responses, efficient issue resolution, and personalized service to enhance player engagement and loyalty.
     `}
-    imgSrc={'/images/industries/betting-gambling/hero.png'} 
+    imgSrc={'/images/industries/casino.png'} 
   />
 
   <IndustrySolutions tabs={tabs} />

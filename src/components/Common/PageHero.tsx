@@ -1,15 +1,17 @@
 import { MoveRight, PhoneCall } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import Image from "next/image";
 
 interface PageHeroProps {
   title: string;
   subtitle: string;
   content: string;
   action: string;
+  imgSrc?: string;
 }
 
-export const PageHero = ({title, subtitle,content,action}: PageHeroProps) => (
+export const PageHero = ({title, subtitle,content,action,imgSrc}: PageHeroProps) => (
   <div className="w-full  py-20 lg:py-40">
     <div className="container mx-auto">
       <div className="grid grid-cols-1 gap-8 items-center lg:grid-cols-2">
@@ -31,7 +33,17 @@ export const PageHero = ({title, subtitle,content,action}: PageHeroProps) => (
             </Button>
           </div>
         </div>
-        <div className="bg-muted rounded-md aspect-square"></div>
+        <div className="flex rounded-md aspect-square items-center">
+          {imgSrc && (
+            <Image
+              src={imgSrc}
+              alt="feature"
+              width={800}
+              height={800}
+              className="object-contain"
+            />
+          )}
+        </div>
       </div>
     </div>
   </div>

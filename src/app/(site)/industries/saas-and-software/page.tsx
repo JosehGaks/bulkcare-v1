@@ -71,6 +71,7 @@ const page = () => {
         content=" 
 You want to exceed existing customer needs, expand your business opportunities, and create a strong brand in the market. We go beyond Saas and Software customer support, tools, and digital technology, and bring the culture that helps drive your growth strategy."
         action="Get More Customers"
+        imgSrc="/images/industries/saas.gif"
       />
       <IndustryChallengeHero title={'INDUSTRY CHALLENGES'} subtitle={'What’s top of mind for leaders in the Saas and Software space?'} paragraph={`
         Capitalizing on all potential areas of market expansion and growth in this fast-moving industry.

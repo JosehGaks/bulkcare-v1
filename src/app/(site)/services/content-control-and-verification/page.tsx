@@ -79,6 +79,7 @@ const page = () => {
         subtitle="Content Control & Verification"
         content="Online content is growing exponentially, and Bulkcare provides advanced technology and expert moderators to protect users and drive optimal content."
         action="Let’s Get Started"
+        imgSrc="/images/services/content.png"
       />
       <Stats stats={stats} />
       <Feature

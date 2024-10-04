@@ -108,6 +108,7 @@ Support Services"
         content="
 We focus on transforming experience at the personalized human level by combining the right technology through integration and bringing your business workflow to life with caring, passionate people focused on the why in each interaction."
         action="Build Your Team"
+        imgSrc="/images/services/back-office.png"
       />
       <Stats stats={stats} />
       <Feature
