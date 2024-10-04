@@ -26,7 +26,7 @@ const WorkCycle = () => {
             <h3 className="text-gray-200 mt-4 text-3xl font-normal font-geist tracking-tighter md:text-5xl sm:text-4xl">
             We ensure a complete workflow cycle for you
             </h3>
-            <p className="mt-3 font-geist text-gray-200">We've got everything handled from the start of your project to its ongoing operations, no matter what challenges arise.
+            <p className="mt-3 font-geist text-gray-200">We&apos;ve got everything handled from the start of your project to its ongoing operations, no matter what challenges arise.
             </p>
           </div>
           <div

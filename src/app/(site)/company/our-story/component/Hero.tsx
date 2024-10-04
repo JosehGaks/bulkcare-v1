@@ -19,7 +19,7 @@ export const Hero1 = () => (
             Founded in 2017, Bulkcare is a company taking a modern approach to the outsourcing industry. Leveraging the 
             power of People and transformative processes that allow both extension and integration. We are changing perceptions 
             of what outsourcing is and can be, and we did that by building truly connected cultures in each of our locations, 
-            and by simply treating our employees better. With Bulkcare, we are all a team and family, and you'll see that true 
+            and by simply treating our employees better. With Bulkcare, we are all a team and family, and you&apos;ll see that true 
             difference when partnering with us.
             </p>
           </div>

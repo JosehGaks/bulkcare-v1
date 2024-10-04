@@ -1,3 +1,4 @@
+"use client";
 import React, { useRef } from 'react'
 import { TimelineContent } from '@/components/ui/framer-timeline'
 import SectionTitle from '@/components/Common/SectionTitle'

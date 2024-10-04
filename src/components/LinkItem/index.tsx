@@ -10,13 +10,13 @@ interface Props extends AnchorHTMLAttributes<HTMLAnchorElement> {
   variant?: "default" | "shiny";
 }
 
-export default ({
+export default function LinkItem({
   children,
   href,
   className = "",
   variant = "default",
   ...props
-}: Props) => (
+}: Props) {return (
   <Link
     {...props}
     href={href}
@@ -24,4 +24,4 @@ export default ({
   >
     {children}
   </Link>
-);
+);}

@@ -48,7 +48,7 @@ const faqs = [
   },
 ];
 
-function index() {
+export default function Faq() {
   const [activeIndex, setActiveIndex] = useState<number | null>(0)
   const [activeItem, setActiveItem] = useState<
     | {
@@ -119,4 +119,4 @@ function index() {
   )
 }
 
-export default index
+
