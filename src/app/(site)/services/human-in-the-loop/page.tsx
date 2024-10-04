@@ -54,7 +54,7 @@ const page = () => {
       icon: <IconSettings size={32} />, // For Account Set-Up
       title: "Account Set-Up",
       description:
-        "New customers come with various setup tasks. We ensure with Helpware's back-office team that your customers have an effortless account set up.",
+        "New customers come with various setup tasks. We ensure with Bulkcare's back-office team that your customers have an effortless account set up.",
     },
     {
       index: 6,
@@ -104,7 +104,7 @@ const page = () => {
       <PageHero
         title="SERVICE"
         subtitle="Human in the Loop (HITL)"
-        content=" Our interconnected and platform-driven world is transforming the traditional definition of both services and experience. However, one constant will remain. There will always be humans in the loop. Helpware is transforming and integrating this journey. Regardless of task type or interaction, we are that critical human connection within your loop of technology, communication, and services.
+        content=" Our interconnected and platform-driven world is transforming the traditional definition of both services and experience. However, one constant will remain. There will always be humans in the loop. Bulkcare is transforming and integrating this journey. Regardless of task type or interaction, we are that critical human connection within your loop of technology, communication, and services.
         "
         action="Synergize People and Data"
       />

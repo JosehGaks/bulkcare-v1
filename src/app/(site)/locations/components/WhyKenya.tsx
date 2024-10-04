@@ -23,7 +23,7 @@ function WhyKenya() {
     strategicLocation: {
       title: "Strategic Location",
       description: `
-        Kenya's location at the heart of East Africa provides easy access to major markets like Uganda, Tanzania, and Rwanda. With its prime GMT+3 time zone, it offers a competitive advantage in providing fast turnaround times for clients around the globe. Nairobi's status as a regional business hub further solidifies Kenya's position as an attractive destination for BPO services.
+        Kenya's location at the heart of East Africa provides easy access to major markets like Kenya, Tanzania, and Rwanda. With its prime GMT+3 time zone, it offers a competitive advantage in providing fast turnaround times for clients around the globe. Nairobi's status as a regional business hub further solidifies Kenya's position as an attractive destination for BPO services.
       `,
     },
     costEffectiveSolutions: {
@@ -38,7 +38,7 @@ function WhyKenya() {
     <>
     <section className='container mx-auto'>
       <SectionTitle title="Why Kenya?" subtitle="Benefits of outsourcing to Kenya" paragraph={`
-        Helpware provides access to a highly skilled and talented workforce in Kenya, with a ready-to-go infrastructure and tremendous support from the local government.
+        Bulkcare provides access to a highly skilled and talented workforce in Kenya, with a ready-to-go infrastructure and tremendous support from the local government.
         `}/>
     <section className="sm:grid grid-cols-2 gap-10 h-[650px]" ref={heroRef}>
         <TimelineContent animationNum={0} timelineRef={heroRef}>

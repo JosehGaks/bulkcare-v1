@@ -54,7 +54,7 @@ const page = () => {
       icon: <IconSettings size={32} />, // For Account Set-Up
       title: "Account Set-Up",
       description:
-        "New customers come with various setup tasks. We ensure with Helpware's back-office team that your customers have an effortless account set up.",
+        "New customers come with various setup tasks. We ensure with Bulkcare's back-office team that your customers have an effortless account set up.",
     },
     {
       index: 6,

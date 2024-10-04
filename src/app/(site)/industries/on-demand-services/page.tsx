@@ -72,7 +72,7 @@ const page = () => {
       competitors entering the market at a record pace
       user experiences and engagement
       security and safety of user information
-      Industry leaders know how important it is to stay ahead of the competition. Working with Helpware provides the required expertise to support you in optimizing interactions and satisfaction.
+      Industry leaders know how important it is to stay ahead of the competition. Working with Bulkcare provides the required expertise to support you in optimizing interactions and satisfaction.
 
       Our approach allows dynamic integration regardless of your platforms, telephony, systems of record, and contact touchpoints. We consume and drive personalized interactions at every step along your customer journey. Leveraging the best tech stack, we put the right “people in the loop” at exactly the right time to support your users, target the right audience, and enhance their experience with your product.
        

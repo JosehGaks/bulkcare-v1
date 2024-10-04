@@ -9,9 +9,9 @@ function TimelineAnimation() {
 
   const advantages = [
     {
-      title: "Helpware’s clear focus on People",
+      title: "Bulkcare’s clear focus on People",
       description:
-        "Helpware’s clear focus on People as a Service model has led to our market leading position in BPO. We use a modern approach to outsourcing. We created the company to change perceptions of what outsourcing is and can be.",
+        "Bulkcare’s clear focus on People as a Service model has led to our market leading position in BPO. We use a modern approach to outsourcing. We created the company to change perceptions of what outsourcing is and can be.",
       imgSrc: "https://images.unsplash.com/photo-1724690416947-3cdc197ffab1?q=80&w=600&auto=format&fit=crop",
       animationNum: 0,
     },

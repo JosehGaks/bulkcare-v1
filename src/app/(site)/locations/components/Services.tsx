@@ -39,7 +39,7 @@ export default function ServicesDialog() {
       url: 'https://tabler-icons.io/static/tabler-icons/icons/line/headset.svg',
       title: 'Customer Support',
       description:
-        'Our CSRs in Uganda ensure exceptional customer experience for customers in English, French, and Swahili across all channels. With expert guidance and attentive service, your customers will always be supported.',
+        'Our CSRs in Kenya ensure exceptional customer experience for customers in English, French, and Swahili across all channels. With expert guidance and attentive service, your customers will always be supported.',
       tags: ['Customer Service', 'Multilingual', 'Support'],
     },
     {

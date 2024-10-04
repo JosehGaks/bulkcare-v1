@@ -77,7 +77,7 @@ const page = () => {
       <PageHero
         title="SERVICE"
         subtitle="Content Control & Verification"
-        content="Online content is growing exponentially, and Helpware provides advanced technology and expert moderators to protect users and drive optimal content."
+        content="Online content is growing exponentially, and Bulkcare provides advanced technology and expert moderators to protect users and drive optimal content."
         action="Let’s Get Started"
       />
       <Stats stats={stats} />

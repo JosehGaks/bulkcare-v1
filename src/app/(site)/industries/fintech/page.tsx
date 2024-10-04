@@ -71,7 +71,7 @@ const page = () => {
         competition entering at a record pace
         user satisfaction and engagement
         management of regulatory compliance and digital transformation
-        Industry leaders know how important it is to stay ahead of the competition. Working with Helpware provides the required expertise to support you in all areas that will optimize the appeal of your product.
+        Industry leaders know how important it is to stay ahead of the competition. Working with Bulkcare provides the required expertise to support you in all areas that will optimize the appeal of your product.
 
         Our approach allows dynamic integration regardless of your platforms, telephony, systems of record, and contact touchpoints. We consume and drive personalized interactions at every step along your customer journey. Leveraging the best tech stack, we put the right “people in the loop” at exactly the right time to support your customers, target the right audience, and enhance their experience with your product.
         `} imgSrc={'/images/industries/saas-software/hero.png'} />

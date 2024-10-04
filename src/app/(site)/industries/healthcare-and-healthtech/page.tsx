@@ -11,7 +11,7 @@ const page = () => {
       title: "Billing and Invoicing Accuracy and Payment",
       description:
         "Accurate and efficient billing practices are the core to the success of your business. You need to be sure payments are expedited for the correct amount.",
-      content:`Helpware uses specialized back-office support teams and technology to eliminate billing, invoicing, and accounting challenges. Our teams are skilled and trained in revenue cycle management, maintaining records, and obtaining payments in a timely and efficient manner.
+      content:`Bulkcare uses specialized back-office support teams and technology to eliminate billing, invoicing, and accounting challenges. Our teams are skilled and trained in revenue cycle management, maintaining records, and obtaining payments in a timely and efficient manner.
       We build customized front and back-office teams that are 100% dedicated to your healthcare business. From recruitment to training to ongoing success, everything is customized for you. We have your back so you can stay focused on scaling and expanding your business.`,
       action: "Get Started",
     },
@@ -20,9 +20,9 @@ const page = () => {
       description:
         `Telehealth has become a normal standard in healthcare delivery and the success of the platforms depends on member engagement, utilization, and satisfaction with the process. Today’s interconnected and platform-driven world is transforming the traditional definition of care delivery and member experience.`,
       content:`
-      Helpware customer support teams help you leverage changing telehealth trends in the industry by providing 24/7 multilingual customer support across multiple channels to communicate with patients. Our dedicated teams help you drive high patient satisfaction and engagement in telehealth workflow processes.
+      Bulkcare customer support teams help you leverage changing telehealth trends in the industry by providing 24/7 multilingual customer support across multiple channels to communicate with patients. Our dedicated teams help you drive high patient satisfaction and engagement in telehealth workflow processes.
 
-Today’s interconnected and platform-driven world is transforming the definition of services and experience. The one constant that remains is there will always be humans in the loop. Helpware is transforming and integrating this journey. Regardless of task type or interaction, we empower the absolute best in “people as a service.” We are that critical human connection within your loop of technology, communication, and services.`,
+Today’s interconnected and platform-driven world is transforming the definition of services and experience. The one constant that remains is there will always be humans in the loop. Bulkcare is transforming and integrating this journey. Regardless of task type or interaction, we empower the absolute best in “people as a service.” We are that critical human connection within your loop of technology, communication, and services.`,
       action: "Get Started",
     },
     {
@@ -31,9 +31,9 @@ Today’s interconnected and platform-driven world is transforming the definitio
       Health plans and providers want to ensure patients have the needed care, are provided with the information they need to enhance their health and drive better outcomes. Determining how to personalize care while decreasing expenses is an industry challenge.
       `,
       content:`
-      Helpware allows you to use your resources more efficiently and effectively by providing affordable back-office and technical support solutions for standardized areas of your business. Our teams manage several tasks including coding, billing services, transcription, help desk, portal services, and appointments.
+      Bulkcare allows you to use your resources more efficiently and effectively by providing affordable back-office and technical support solutions for standardized areas of your business. Our teams manage several tasks including coding, billing services, transcription, help desk, portal services, and appointments.
 
-Helpware also supports clinical services with efficient resources in digital consultation, payer and provider benefits management, government-mandated benefits, and pharmaceutical support.
+Bulkcare also supports clinical services with efficient resources in digital consultation, payer and provider benefits management, government-mandated benefits, and pharmaceutical support.
       `,
       action: "Get Started",
     },
@@ -43,7 +43,7 @@ Helpware also supports clinical services with efficient resources in digital con
       An engaged patient who is satisfied with their healthcare experience drives growth, a healthier population, and reduced risk.
       `,
       content:`
-      Helpware has extensive customer service experience and expertise and understands how to personalize the customer experience. Our teams are focused on high-quality service, increased CSAT, and improved KPIs. We focus on a personalized approach for every patient that drives loyalty and satisfaction.
+      Bulkcare has extensive customer service experience and expertise and understands how to personalize the customer experience. Our teams are focused on high-quality service, increased CSAT, and improved KPIs. We focus on a personalized approach for every patient that drives loyalty and satisfaction.
       `,
       action: "Get Started",
     },
@@ -74,7 +74,7 @@ Helpware also supports clinical services with efficient resources in digital con
         accelerating digital advancements that can support strategies
         patient satisfaction and engagement drives competitive advantage
         data is the key driver in understanding cost and care accuracy
-        Working with Helpware provides you personalized business process outsourcing solutions to support the rapidly changing world of health care delivery and technology. 
+        Working with Bulkcare provides you personalized business process outsourcing solutions to support the rapidly changing world of health care delivery and technology. 
         
         We provide the right humans in the loop to transform and support your growth and expansion strategies. Regardless of task type or interaction - By empowering the absolute best in “people as a service” we are that critical human connection within your loop of technology, communication, and services.
         `} imgSrc={'/images/industries/saas-software/hero.png'} />
