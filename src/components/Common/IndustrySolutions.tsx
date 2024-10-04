@@ -38,9 +38,9 @@ function IndustrySolutions({ tabs }: Props) {
               onClick={() => handleClick(index)}
             >
               <h3
-                className={`p-4 cursor-pointer transition-all font-semibold    dark:text-white text-black dark:hover:bg-[#1e2a78] hover:bg-[#F2F2F2] dark:hover:text-white hover:text-black flex justify-between items-center ${
+                className={`p-4 cursor-pointer transition-all font-semibold    dark:text-white text-black dark:hover:bg-[#282829] hover:bg-[#F2F2F2] dark:hover:text-white hover:text-black flex justify-between items-center ${
                   activeIndex === index
-                    ? 'active  dark:bg-[#1e2a78] bg-[#F2F2F2] '
+                    ? 'active  dark:bg-black bg-[#F2F2F2] '
                     : 'dark:bg-[#11112b] bg-white'
                 }
                `}

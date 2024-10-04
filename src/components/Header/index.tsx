@@ -38,10 +38,12 @@ import {
 } from 'lucide-react';
 import Image from 'next/image';
 
-const ListItem = ({ className, title, children, icon: Icon, ...props }:any) => {
+const ListItem = ({ className, title, children, icon: Icon,href, ...props }:any) => {
+  const linkHref = href || '/';
+
   return (
     <li>
-      <Link href={props.href}>
+      <Link href={linkHref}>
       <NavigationMenuLink asChild>
         <a
           className={cn(
@@ -81,10 +83,11 @@ export default function Navbar() {
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
       isScrolled ? "bg-background/80 backdrop-blur-sm shadow" : "bg-transparent"
     )}>
-      <div className="Container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
-            <Image className="" src="/images/logo/logo.svg" alt="BulkCare" height={150} width={150}/>
+            <Image className="dark:hidden" src="/images/logo/logo.svg" alt="BulkCare" height={124} width={124}/>
+            <Image className="dark:block" src="/images/logo/logo-white.svg" alt="BulkCare" height={124} width={124}/>
           </div>
           <div className="hidden sm:flex sm:items-center sm:justify-center flex-grow">
             <NavigationMenu>
