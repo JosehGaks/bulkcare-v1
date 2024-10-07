@@ -8,45 +8,47 @@ import workCycleData from "./workCycleData";
 import SingleWorkCycle from "./Cycle";
 
 const WorkCycle = () => {
-
   return (
-    <section className="py-20 mt-16 relative">
-<img
-          className="absolute inset-x-0 -top-20 opacity-75"
-          src={
-            "https://tailwindcss.com/_next/static/media/docs@30.8b9a76a2.avif"
-          }
-          width={1000}
-          height={1000}
-          alt="back bg"
-        />
-      <div className="max-w-screen-xl mx-auto px-4 text-gray-400 md:px-8">
-        <div className="relative max-w-2xl mx-auto sm:text-center">
+    <>
+    <section className="bg-transparent py-20 lg:pb-0 ">
+      <img
+        className="absolute inset-x-0 -top-20 opacity-75"
+        src={"https://tailwindcss.com/_next/static/media/docs@30.8b9a76a2.avif"}
+        width={1000}
+        height={1000}
+        alt="back bg"
+      />
+      <div className="mx-auto max-w-screen-xl px-4 text-gray-400 md:px-8">
+        <div className="relative mx-auto max-w-2xl sm:text-center">
           <div className="relative z-10">
-            <h3 className="text-gray-200 mt-4 text-3xl font-normal font-geist tracking-tighter md:text-5xl sm:text-4xl">
-            We ensure a complete workflow cycle for you
+            <h3 className="font-geist mt-4 text-3xl font-normal tracking-tighter text-gray-200 sm:text-4xl md:text-5xl">
+              We ensure a complete workflow cycle for you
             </h3>
-            <p className="mt-3 font-geist text-gray-200">We&apos;ve got everything handled from the start of your project to its ongoing operations, no matter what challenges arise.
+            <p className="font-geist mt-3 text-gray-200">
+              We&apos;ve got everything handled from the start of your project
+              to its ongoing operations, no matter what challenges arise.
             </p>
           </div>
           <div
-            className="absolute inset-0 max-w-xs mx-auto h-44 blur-[118px]"
+            className="absolute inset-0 mx-auto h-44 max-w-xs blur-[118px]"
             style={{
               background:
                 "linear-gradient(152.92deg, rgba(192, 132, 252, 0.2) 4.54%, rgba(232, 121, 249, 0.26) 34.2%, rgba(192, 132, 252, 0.1) 77.55%)",
             }}
           ></div>
         </div>
-        <hr className="bg-white/30 h-px w-1/2 mx-auto  mt-5"/>
+        <hr className="mx-auto mt-5 h-px w-1/2  bg-white/30" />
         <div className="relative mt-12">
           <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {workCycleData.map((item, idx) => (
               <li
                 key={idx}
-                className="bg-transparent transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset]  space-y-3 p-4 border rounded-xl"
+                className="transform-gpu space-y-3 rounded-xl border  bg-transparent p-4 dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset]"
               >
-                <div className="text-purple-600 rounded-full p-4 transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset] w-fit">{item.icon}</div>
-                <h4 className="text-lg text-gray-300 font-bold font-geist tracking-tighter">
+                <div className="w-fit transform-gpu rounded-full p-4 text-purple-600 dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset]">
+                  {item.icon}
+                </div>
+                <h4 className="font-geist text-lg font-bold tracking-tighter text-gray-300">
                   {item.title}
                 </h4>
                 <p className="text-gray-500">{item.description}</p>
@@ -55,11 +57,10 @@ const WorkCycle = () => {
           </ul>
         </div>
       </div>
-    </section>
+    </section>    
+    </>
+
   );
-}   
+};
 
 export default WorkCycle;
-
-
-

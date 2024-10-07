@@ -41,7 +41,7 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="relative">
+    <section className="py-18 bg-transparent pb-0 pt-0 lg:py-20 lg:pb-0 lg:pt-0 relative">
       <img
         className="absolute inset-x-0 -top-20 opacity-25 "
         src={

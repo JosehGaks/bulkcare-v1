@@ -15,7 +15,7 @@ const Logo = ({ name, img }: { name: string; img: string }) => {
 }
 function Clients() {
   return (
-    <>
+    <section className="py-18 bg-transparent pb-0 pt-0 lg:py-20 lg:pb-0 lg:pt-0">
       <div className="overflow-hidden bg-black pt-20">
         <div className="container mx-auto mt-32 w-screen">
           <div className="text-center text-3xl text-white">
@@ -45,7 +45,7 @@ function Clients() {
           />
         </div>
       </div>
-    </>
+    </section>
   )
 }
 

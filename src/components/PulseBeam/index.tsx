@@ -21,7 +21,8 @@ export default function PulseBeam() {
   const div7Ref = useRef<HTMLDivElement>(null)
 
   return (
-    <div
+    <section className="py-18 bg-transparent pb-0 pt-0 lg:py-20 lg:pb-0 lg:pt-0">
+       <div
       className="relative flex flex-col w-full container mx-auto items-center justify-center overflow-hidden px-10 pt-20"
       ref={containerRef}
     >
@@ -113,6 +114,8 @@ export default function PulseBeam() {
         gradientStartColor="#48b0d9"
         gradientStopColor="#67aeff"
       />
-    </div>
+    </div>   
+    </section>
+
   )
 }

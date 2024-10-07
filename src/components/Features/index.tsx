@@ -56,7 +56,8 @@ export default function FeaturesSectionDemo() {
     },
   ];
   return (
-    <div className="container mx-auto flex text-center justify-center items-center gap-4 flex-col pt-20">
+    <section className="py-18 bg-transparent pb-0 pt-0 lg:py-20 lg:pb-0 lg:pt-0">
+     <div className="container mx-auto flex text-center justify-center items-center gap-4 flex-col pt-20">
     <Badge>Features</Badge>
     <div className="flex gap-2 flex-col">
           <h2 className="text-3xl md:text-5xl tracking-tighter max-w-xl text-center font-regular">
@@ -74,7 +75,9 @@ export default function FeaturesSectionDemo() {
           <GridPattern />
         </div>
     </div>
-    </div>
+    </div>     
+    </section>
+
 
   );
 }

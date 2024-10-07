@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <section id="contact" className="relative py-20 md:py-[120px]">
+    <section id="contact" className="relative py-18 bg-transparent pb-0 pt-0 lg:py-20 lg:pb-0 lg:pt-0">
       <div className="absolute left-0 top-0 -z-[1] h-full w-full dark:bg-dark"></div>
       <div className="absolute left-0 top-0 -z-[1] h-1/2 w-full lg:h-[45%] xl:h-1/2"></div>
       <div className="container px-4">

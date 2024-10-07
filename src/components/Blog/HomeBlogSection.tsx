@@ -3,7 +3,7 @@ import SingleBlog from "./SingleBlog";
 
 const HomeBlogSection = ({ posts }: any) => {
   return (
-    <section className="pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]">
+    <section className="py-18 bg-transparent pb-0 pt-0 lg:py-20 lg:pb-0 lg:pt-0">
       <div className="container mx-auto">
         <div className="mb-[60px]">
           <SectionTitle title={"Blog"} subtitle="Our Latest News" paragraph={""}/>

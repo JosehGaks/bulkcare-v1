@@ -4,81 +4,77 @@ const menuData: Menu[] = [
   {
     id: 1,
     title: "Home",
-    path: "/",
     newTab: false,
+    path: "/",
   },
   {
     id: 2,
-    title: "About",
-    path: "/about",
+    title: "Features",
     newTab: false,
+    path: "/#features",
+  },
+  {
+    id: 2.1,
+    title: "Blog",
+    newTab: false,
+    path: "/blog",
+  },
+  {
+    id: 2.3,
+    title: "Docs",
+    newTab: false,
+    path: "/docs",
   },
   {
     id: 3,
-    title: "Pricing",
-    path: "/pricing",
+    title: "Pages",
     newTab: false,
+    submenu: [
+      {
+        id: 31,
+        title: "Blog Grid",
+        newTab: false,
+        path: "/blog",
+      },
+      {
+        id: 34,
+        title: "Sign In",
+        newTab: false,
+        path: "/auth/signin",
+      },
+      {
+        id: 35,
+        title: "Sign Up",
+        newTab: false,
+        path: "/auth/signup",
+      },
+      {
+        id: 35,
+        title: "Docs",
+        newTab: false,
+        path: "/docs",
+      },
+      {
+        id: 35.1,
+        title: "Support",
+        newTab: false,
+        path: "/support",
+      },
+      {
+        id: 36,
+        title: "404",
+        newTab: false,
+        path: "/error",
+      },
+    ],
   },
+
   {
-    id: 5,
-    title: "Contact",
-    path: "/contact",
+    id: 4,
+    title: "Support",
     newTab: false,
+    path: "/support",
   },
-  {
-    id: 5,
-    title: "Blog",
-    path: "/blogs",
-    newTab: false,
-  },
-  // {
-  //   id: 6,
-  //   title: "Pages",
-  //   newTab: false,
-  //   submenu: [
-  //     {
-  //       id: 61,
-  //       title: "About Page",
-  //       path: "/about",
-  //       newTab: false,
-  //     },
-  //     {
-  //       id: 62,
-  //       title: "Pricing Page",
-  //       path: "/pricing",
-  //       newTab: false,
-  //     },
-  //     {
-  //       id: 63,
-  //       title: "Contact Page",
-  //       path: "/contact",
-  //       newTab: false,
-  //     },
-  //     {
-  //       id: 64,
-  //       title: "Blog Grid Page",
-  //       path: "/blogs",
-  //       newTab: false,
-  //     },
-  //     {
-  //       id: 66,
-  //       title: "Sign Up Page",
-  //       path: "/signup",
-  //       newTab: false,
-  //     },
-  //     {
-  //       id: 67,
-  //       title: "Sign In Page",`
-  //       path: "/signin",
-  //       newTab: false,
-  //     },
-  //     {
-  //       id: 68,
-  //       title: "Error Page",
-  //       path: "/error",
-  //       newTab: false,
-  //     },
-  //   ],
-  // },
 ];
+
 export default menuData;

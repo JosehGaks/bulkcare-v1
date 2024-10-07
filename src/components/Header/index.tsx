@@ -1,10 +1,27 @@
-"use client"
+"use client";
+import {
+  Activity,
+  Book,
+  Bot,
+  Briefcase,
+  Cloud,
+  Gamepad2,
+  Laptop,
+  Menu,
+  ShieldCheck,
+  ShoppingCart,
+  Sunset,
+  Trees,
+  Zap,
+} from "lucide-react";
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { Menu } from 'lucide-react';
-import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { Button, buttonVariants } from "@/components/ui/button";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -14,223 +31,511 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { cn } from "@/lib/utils";
 import {
-  Laptop,
-  ShieldCheck,
-  Bot,
-  Briefcase,
-  Database,
-  Users,
-  BarChart,
-  Lock,
-  Code,
-  ShoppingCart,
-  Cloud,
-  Activity,
-  Gamepad2,
-  Banknote,
-  Car,
-  MapPin,
-  Globe,
-  DollarSign,
-  BookOpen,
-} from 'lucide-react';
-import Image from 'next/image';
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
-const ListItem = ({ className, title, children, icon: Icon,href, ...props }:any) => {
-  const linkHref = href || '/';
+// Submenu for Services page
+// Submenu for Services page
+const subMenuItemsServices = [
+  {
+    title: "Digital Customer Experience",
+    description: "Enhance your customer experiences across all channels",
+    icon: <Laptop className="size-5 shrink-0" />, // Icon for visual representation
+    slug: "digital-customer-experience", // URL-friendly slug
+  },
+  {
+    title: "Content Control & Verification",
+    description: "Enable a safe environment and trusted brand",
+    icon: <ShieldCheck className="size-5 shrink-0" />,
+    slug: "content-control-verification",
+  },
+  {
+    title: "AI Customer Service",
+    description:
+      "Faster, better, and more efficient customer support experiences",
+    icon: <Bot className="size-5 shrink-0" />,
+    slug: "ai-customer-service",
+  },
+  {
+    title: "Back-office Support",
+    description: "Extend your team with global, culturally aligned teams",
+    icon: <Briefcase className="size-5 shrink-0" />,
+    slug: "back-office-support",
+  },
+];
+
+// Submenu for Industries page
+const subMenuItemsIndustries = [
+  {
+    title: "Ecommerce & Retail",
+    description: "Personalized customer journeys and better service",
+    icon: <ShoppingCart className="size-5 shrink-0" />,
+    slug: "ecommerce-retail",
+  },
+  {
+    title: "SaaS & Software",
+    description: "Exceed customer needs and unlock business potential",
+    icon: <Cloud className="size-5 shrink-0" />,
+    slug: "saas-software",
+  },
+  {
+    title: "HealthTech",
+    description: "Innovate healthcare services and enhance patient experience",
+    icon: <Activity className="size-5 shrink-0" />,
+    slug: "healthtech",
+  },
+  {
+    title: "Gaming & Entertainment",
+    description: "Lead customer choice and drive service expectations",
+    icon: <Gamepad2 className="size-5 shrink-0" />,
+    slug: "gaming-entertainment",
+  },
+];
+
+// Submenu for Resources page
+const subMenuItemsResources = [
+  {
+    title: "Help Center",
+    description: "Find all the answers you need here",
+    icon: <Zap className="size-5 shrink-0" />,
+    slug: "help-center", // URL-friendly slug
+  },
+  {
+    title: "Contact Us",
+    description: "Reach out to us for assistance",
+    icon: <Sunset className="size-5 shrink-0" />,
+    slug: "contact-us",
+  },
+  {
+    title: "Status",
+    description: "Check the current status of our services",
+    icon: <Trees className="size-5 shrink-0" />,
+    slug: "status",
+  },
+  {
+    title: "Terms of Service",
+    description: "Read our terms and conditions",
+    icon: <Book className="size-5 shrink-0" />,
+    slug: "terms-of-service",
+  },
+];
+
+const Navbar = () => {
+  const pathUrl = usePathname();
+
+  const [sticky, setSticky] = useState(false);
+  const handleStickyNavbar = () => {
+    if (window.scrollY >= 80) {
+      setSticky(true);
+    } else {
+      setSticky(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleStickyNavbar);
+  });
+
 
   return (
-    <li>
-      <Link href={linkHref}>
-      <NavigationMenuLink asChild>
-        <a
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
-          )}
-          {...props}
-        >
-          <div className="flex items-center gap-2">
-            {Icon && <Icon className="h-5 w-5" />}
-            <div className="text-sm font-medium leading-none">{title}</div>
+    <>
+      <header
+        className={`ud-header left-0 top-0 z-40 flex w-full items-center py-3 ${
+          sticky
+            ? "shadow-nav border-stroke dark:border-dark-3/20 dark:bg-dark/10 fixed z-[999] border-b backdrop-blur-[5px]"
+            : "absolute bg-transparent"
+        }`}
+      >
+        <div className="container mx-auto">
+          <nav
+            className={`lg:h-18 hidden justify-between lg:relative lg:flex lg:justify-between h-14`}
+          >
+            <div className="flex items-center justify-between gap-6 ">
+              <div className="flex w-36 justify-start left-0">
+                <Link
+                  href="/"
+                  className={`navbar-logo block w-full ${
+                    sticky ? "py-2" : "py-5"
+                  } `}
+                >
+                  {pathUrl !== "/" ? (
+                    <>
+                      <Image
+                        src={`${
+                          sticky
+                            ? "/images/logo/logo.svg"
+                            : "/images/logo/logo.svg"
+                        }`}
+                        alt="logo"
+                        width={70}
+                        height={70}
+                        className="header-logo w-full dark:hidden"
+                      />
+                      <Image
+                        src={`/images/logo/logo-white.svg`}
+                        alt="logo"
+                        width={70}
+                        height={70}
+                        className="header-logo hidden w-full dark:block"
+                      />
+                    </>
+                  ) : (
+                    <>
+                      <Image
+                        src={`${
+                          sticky
+                            ? "/images/logo/logo.svg"
+                            : "/images/logo/logo-white.svg"
+                        }`}
+                        alt="logo"
+                        width={70}
+                        height={70}
+                        className="header-logo w-full dark:hidden"
+                      />
+                      <Image
+                        src={"/images/logo/logo-white.svg"}
+                        alt="logo"
+                        width={70}
+                        height={70}
+                        className="header-logo hidden w-full dark:block"
+                      />
+                    </>
+                  )}
+                </Link>
+              </div>
+              <div className="flex items-center">
+                <Link
+                  className={cn(
+                    navigationMenuTriggerStyle,
+                    buttonVariants({
+                      variant: "ghost",
+                    }),
+                  )}
+                  href="/"
+                >
+                  Home
+                </Link>
+                <NavigationMenu>
+                  <NavigationMenuList>
+                    <NavigationMenu>
+                      <NavigationMenuList>
+                        <NavigationMenuItem>
+                          <NavigationMenuTrigger>
+                            Services
+                          </NavigationMenuTrigger>
+                          <NavigationMenuContent>
+                            <ul className="w-80 p-3">
+                              {subMenuItemsServices.map((item, idx) => (
+                                <li key={idx}>
+                                  <Link
+                                    className="flex gap-4 rounded-md p-3 hover:bg-accent"
+                                    href={`/services/${item.slug}`}
+                                  >
+                                    {item.icon}
+                                    <div>
+                                      <div className="text-sm font-semibold">
+                                        {item.title}
+                                      </div>
+                                      <p className="text-sm text-muted-foreground">
+                                        {item.description}
+                                      </p>
+                                    </div>
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </NavigationMenuContent>
+                        </NavigationMenuItem>
+
+                        <NavigationMenuItem>
+                          <NavigationMenuTrigger>
+                            Industries
+                          </NavigationMenuTrigger>
+                          <NavigationMenuContent>
+                            <ul className="w-80 p-3">
+                              {subMenuItemsIndustries.map((item, idx) => (
+                                <li key={idx}>
+                                  <Link
+                                    className="flex gap-4 rounded-md p-3 hover:bg-accent"
+                                    href={`/industries/${item.slug}`}
+                                  >
+                                    {item.icon}
+                                    <div>
+                                      <div className="text-sm font-semibold">
+                                        {item.title}
+                                      </div>
+                                      <p className="text-sm text-muted-foreground">
+                                        {item.description}
+                                      </p>
+                                    </div>
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </NavigationMenuContent>
+                        </NavigationMenuItem>
+
+                        <NavigationMenuItem>
+                          <NavigationMenuTrigger>
+                            Resources
+                          </NavigationMenuTrigger>
+                          <NavigationMenuContent>
+                            <ul className="w-80 p-3">
+                              {subMenuItemsResources.map((item, idx) => (
+                                <li key={idx}>
+                                  <Link
+                                    className="flex gap-4 rounded-md p-3 hover:bg-accent"
+                                    href={`/resources/${item.slug}`}
+                                  >
+                                    {item.icon}
+                                    <div>
+                                      <div className="text-sm font-semibold">
+                                        {item.title}
+                                      </div>
+                                      <p className="text-sm text-muted-foreground">
+                                        {item.description}
+                                      </p>
+                                    </div>
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </NavigationMenuContent>
+                        </NavigationMenuItem>
+                      </NavigationMenuList>
+                    </NavigationMenu>
+                  </NavigationMenuList>
+                </NavigationMenu>
+
+                <Link
+                  className={cn(
+                    navigationMenuTriggerStyle,
+                    buttonVariants({
+                      variant: "ghost",
+                    }),
+                  )}
+                  href="#"
+                >
+                  Pricing
+                </Link>
+                <Link
+                  className={cn(
+                    navigationMenuTriggerStyle,
+                    buttonVariants({
+                      variant: "ghost",
+                    }),
+                  )}
+                  href="#"
+                >
+                  Blog
+                </Link>
+              </div>
+            </div>
+            <div className="flex gap-2">
+              {/* <Button variant={"outline"}>Log in</Button> */}
+              <Button>Get Started</Button>
+            </div>
+          </nav>
+          <div className="block lg:hidden">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+              <>
+                      <Image
+                        src={`${
+                          sticky
+                            ? "/images/logo/logo.svg"
+                            : "/images/logo/logo.svg"
+                        }`}
+                        alt="logo"
+                        width={100}
+                        height={100}
+                        className="header-logo w-full dark:hidden"
+                      />
+                      <Image
+                        src={`/images/logo/logo-white.svg`}
+                        alt="logo"
+                        width={100}
+                        height={100}
+                        className="header-logo hidden w-full dark:block"
+                      />
+                    </>
+                <span className="text-xl font-bold">Bulkcare</span>
+              </div>
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button variant={"outline"} size={"icon"}>
+                    <Menu className="size-4" />
+                  </Button>
+                </SheetTrigger>
+                <SheetContent className="overflow-y-auto">
+                  <SheetHeader>
+                    <SheetTitle>
+                      <div className="flex items-center gap-2">
+                        <img
+                          src="https://www.shadcnblocks.com/images/block/block-1.svg"
+                          className="w-8"
+                          alt="logo"
+                        />
+                        <span className="text-xl font-bold">Shadcn Blocks</span>
+                      </div>
+                    </SheetTitle>
+                  </SheetHeader>
+                  <div className="my-8 flex flex-col gap-4">
+                    <Link href="#" className="font-semibold">
+                      Home
+                    </Link>
+                    <Accordion type="single" collapsible className="w-full">
+                      <AccordionItem value="services" className="border-b-0">
+                        <AccordionTrigger className="mb-4 py-0 font-semibold hover:no-underline">
+                          Services
+                        </AccordionTrigger>
+                        <AccordionContent className="mt-2">
+                          {subMenuItemsServices.map((item, idx) => (
+                            <Link
+                              key={idx}
+                              className={cn(
+                                "flex select-none gap-4 rounded-md p-3 leading-none outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+                              )}
+                              href={`/services/${item.slug}`}
+                            >
+                              {item.icon}
+                              <div>
+                                <div className="text-sm font-semibold">
+                                  {item.title}
+                                </div>
+                                <p className="text-sm leading-snug text-muted-foreground">
+                                  {item.description}
+                                </p>
+                              </div>
+                            </Link>
+                          ))}
+                        </AccordionContent>
+                      </AccordionItem>
+                      <AccordionItem value="industries" className="border-b-0">
+                        <AccordionTrigger className="py-0 font-semibold hover:no-underline">
+                          Industries
+                        </AccordionTrigger>
+                        <AccordionContent className="mt-2">
+                          {subMenuItemsIndustries.map((item, idx) => (
+                            <Link
+                              key={idx}
+                              className={cn(
+                                "flex select-none gap-4 rounded-md p-3 leading-none outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+                              )}
+                              href={`/industries/${item.slug}`}
+                            >
+                              {item.icon}
+                              <div>
+                                <div className="text-sm font-semibold">
+                                  {item.title}
+                                </div>
+                                <p className="text-sm leading-snug text-muted-foreground">
+                                  {item.description}
+                                </p>
+                              </div>
+                            </Link>
+                          ))}
+                        </AccordionContent>
+                      </AccordionItem>
+                    </Accordion>
+                    <Link href="/pricing" className="font-semibold">
+                      Pricing
+                    </Link>
+                    <Link href="/blog" className="font-semibold">
+                      Blog
+                    </Link>
+                  </div>
+                  <div className="border-t pt-4">
+                    <div className="grid grid-cols-2 justify-start">
+                      <Link
+                        className={cn(
+                          buttonVariants({
+                            variant: "ghost",
+                          }),
+                          "justify-start text-muted-foreground",
+                        )}
+                        href="/press"
+                      >
+                        Press
+                      </Link>
+                      <Link
+                        className={cn(
+                          buttonVariants({
+                            variant: "ghost",
+                          }),
+                          "justify-start text-muted-foreground",
+                        )}
+                        href="contact"
+                      >
+                        Contact
+                      </Link>
+                      <Link
+                        className={cn(
+                          buttonVariants({
+                            variant: "ghost",
+                          }),
+                          "justify-start text-muted-foreground",
+                        )}
+                        href="/imprint"
+                      >
+                        Imprint
+                      </Link>
+                      <Link
+                        className={cn(
+                          buttonVariants({
+                            variant: "ghost",
+                          }),
+                          "justify-start text-muted-foreground",
+                        )}
+                        href="/sitemap"
+                      >
+                        Sitemap
+                      </Link>
+                      <Link
+                        className={cn(
+                          buttonVariants({
+                            variant: "ghost",
+                          }),
+                          "justify-start text-muted-foreground",
+                        )}
+                        href="/legal"
+                      >
+                        Legal
+                      </Link>
+                      <Link
+                        className={cn(
+                          buttonVariants({
+                            variant: "ghost",
+                          }),
+                          "justify-start text-muted-foreground",
+                        )}
+                        href="/cookie-settings"
+                      >
+                        Cookie Settings
+                      </Link>
+                    </div>
+                    <div className="mt-2 flex flex-col gap-3">
+                      <Button>Get Started</Button>
+                    </div>
+                  </div>
+                </SheetContent>
+              </Sheet>
+            </div>
           </div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
-        </a>
-      </NavigationMenuLink>
-      </Link>
-    </li>
+        </div>
+      </header>
+    </>
   );
 };
 
-export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  return (
-    <nav className={cn(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-      isScrolled ? "bg-background/80 backdrop-blur-sm shadow" : "bg-transparent"
-    )}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="flex justify-between h-16">
-          <div className="flex-shrink-0 flex items-center">
-            <Image className="dark:hidden" src="/images/logo/logo.svg" alt="BulkCare" height={124} width={124}/>
-            <Image className="dark:block" src="/images/logo/logo-white.svg" alt="BulkCare" height={124} width={124}/>
-          </div>
-          <div className="hidden sm:flex sm:items-center sm:justify-center flex-grow">
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger>Services</NavigationMenuTrigger>
-                  <NavigationMenuContent className="z-50">
-                    <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-2">
-                      <ListItem title="Digital Customer Experience" icon={Laptop} href="/services/digital-customer-experience">
-                        Enhance your customer experiences across all channels
-                      </ListItem>
-                      <ListItem title="Content Control & Verification" icon={ShieldCheck} href="/services/content-control-and-verification">
-                        Enable a safe environment and trusted brand
-                      </ListItem>
-                      <ListItem title="AI Customer Service" icon={Bot} href="/services/ai-customer-service">
-                        Faster, better, and more efficient customer support experiences
-                      </ListItem>
-                      <ListItem title="Back-office Support" icon={Briefcase} href="/services/back-office-support">
-                        Extend your team with culturally aligned, global teams
-                      </ListItem>
-                      <ListItem title="Human in the loop (HITL)" icon={Users} href="/services/human-in-the-loop">
-                        Transform critical human connections in your technology loop
-                      </ListItem>
-                      <ListItem title="Digital Marketing Support" icon={BarChart} href="/services/digital-marketing-support">
-                        Drive better marketing results with precision
-                      </ListItem>
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger>Industries</NavigationMenuTrigger>
-                  <NavigationMenuContent className="z-50">
-                    <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-2">
-                      <ListItem title="Ecommerce & Retail" icon={ShoppingCart} href="/industries/ecommerce-and-retail">
-                        Meet your customers with a personalized journey
-                      </ListItem>
-                      <ListItem title="SaaS & Software" icon={Cloud} href="/industries/saas-and-software">
-                        Exceed customer needs and expand business opportunities
-                      </ListItem>
-                      <ListItem title="HealthCare & HealthTech" icon={Activity} href="/industries/healthcare-and-healthtech">
-                        Drive growth and advance patient experience
-                      </ListItem>
-                      <ListItem title="Gaming & Entertainment" icon={Gamepad2} href="/industries/gaming-and-entertainment">
-                        Take the lead in customer choice and service expectations
-                      </ListItem>
-                      <ListItem title="FinTech" icon={Banknote} href="/industries/fintech">
-                        Provide secure solutions that protect users and meet regulations
-                      </ListItem>
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger>Locations</NavigationMenuTrigger>
-                  <NavigationMenuContent className="z-50">
-                    <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-2">
-                      <ListItem title="BulkCare Kenya" icon={MapPin} href="/locations/kenya">
-                        Skillful, scalable talent pool
-                      </ListItem>
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    <ListItem title="Pricing" icon={DollarSign} href="/pricing"/>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <Link href="/insights" legacyBehavior passHref>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                      <ListItem title="Insights" icon={BookOpen} href="/insights"/>
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-          </div>
-          <div className="flex items-center space-x-4">
-            <Button asChild className="hidden sm:inline-flex">
-              <Link href="/get-started">Get Started</Link>
-            </Button>
-            <Sheet>
-              <SheetTrigger asChild>
-                <Button variant="outline" size="icon" className="sm:hidden">
-                  <Menu className="h-6 w-6" />
-                  <span className="sr-only">Open main menu</span>
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className='z-50'>
-                <div className="px-2 pt-2 pb-3 space-y-1">
-                  <NavigationMenu orientation="vertical">
-                    <NavigationMenuList className="flex-col items-start">
-                      <NavigationMenuItem>
-                        <NavigationMenuTrigger>Services</NavigationMenuTrigger>
-                        <NavigationMenuContent className="z-50">
-                          <ul className="grid gap-3 p-6 md:w-[400px]">
-                            <ListItem title="Digital Customer Experience" icon={Laptop} href="/services/digital-customer-experience"/>
-                            <ListItem title="Content Control & Verification" icon={ShieldCheck} href="/services/content-control-and-verification"/>
-                            <ListItem title="AI Customer Service" icon={Bot} href="/services/ai-customer-service"/>
-                            <ListItem title="Back-office Support" icon={Briefcase} href="/services/back-office-support"/>
-                            <ListItem title="Human in the loop (HITL)" icon={Users} href="/services/human-in-the-loop"/>
-                            <ListItem title="Digital Marketing Support" icon={BarChart} href="/services/digital-marketing-support"/>
-                          </ul>
-                        </NavigationMenuContent>
-                      </NavigationMenuItem>
-                      <NavigationMenuItem>
-                        <NavigationMenuTrigger>Industries</NavigationMenuTrigger>
-                        <NavigationMenuContent className="z-50">
-                          <ul className="grid gap-3 p-6 md:w-[400px]">
-                            <ListItem title="Ecommerce & Retail" icon={ShoppingCart} href="/industries/ecommerce-and-retail"/>
-                            <ListItem title="SaaS & Software" icon={Cloud} href="/industries/saas-and-software"/>
-                            <ListItem title="HealthCare & HealthTech" icon={Activity} href="/industries/healthcare-and-healthtech"/>
-                            <ListItem title="Gaming & Entertainment" icon={Gamepad2} href="/industries/gaming-and-entertainment"/>
-                            <ListItem title="FinTech" icon={Banknote} href="/industries/fintech"/>
-                          </ul>
-                        </NavigationMenuContent>
-                      </NavigationMenuItem>
-                      <NavigationMenuItem>
-                        <NavigationMenuTrigger>Locations</NavigationMenuTrigger>
-                        <NavigationMenuContent className="z-50">
-                          <ul className="grid gap-3 p-6 md:w-[400px]">
-                            <ListItem title="BulkCare Kenya" icon={MapPin} href="/locations/kenya"/>
-                          </ul>
-                        </NavigationMenuContent>
-                      </NavigationMenuItem>
-                      <NavigationMenuItem>
-                        <ListItem title="Pricing" icon={DollarSign} href="/pricing"/>
-                      </NavigationMenuItem>
-                      <NavigationMenuItem>
-                        <Link href="/insights" legacyBehavior passHref>
-                          <ListItem title="Insights" icon={BookOpen} href="/blog"/>
-                        </Link>
-                      </NavigationMenuItem>
-                    </NavigationMenuList>
-                  </NavigationMenu>
-                  <Button asChild className="w-full mt-4">
-                    <Link href="/get-started">Get Started</Link>
-                  </Button>
-                </div>
-              </SheetContent>
-            </Sheet>
-          </div>
-        </div>
-      </div>
-    </nav>
-  );
-}
+export default Navbar;

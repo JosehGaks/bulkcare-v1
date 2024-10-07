@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 
 export default function FUIBentoGridDark() {
   return (
-    <div className="pt-32 container mx-auto">
+    <section className="py-18 bg-transparent pb-0 pt-0 lg:py-20 lg:pb-0 lg:pt-0">
+      <div className="pt-32 container mx-auto">
       <h1 className="font-geistMono tracking-tight text-3xl md:text-5xl">
         BulkCare Solutions
       </h1>
@@ -59,7 +60,9 @@ export default function FUIBentoGridDark() {
           className="max-lg:rounded-b-4xl lg:col-span-2 lg:rounded-br-4xl"
         />
       </div>
-    </div>
+    </div>    
+    </section>
+
   );
 }
 

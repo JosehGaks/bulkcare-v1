@@ -3,7 +3,7 @@ import Channels from "./Channels";
 
 const CallToAction = () => {
   return (
-<section className="py-18 lg:py-20 bg-transparent !pb-28 !pt-[110px] md:!pb-36 md:!pt-[132px]">
+<section className="py-18 bg-transparent pb-0 pt-0 lg:py-20 lg:pb-0 lg:pt-0">
   <div className="container mx-auto z-10 sm:px-0 relative">
     <div className="max-w-[760px] w-fit space-y-6 lg:space-y-10 mx-auto">
       <div className="relative">
