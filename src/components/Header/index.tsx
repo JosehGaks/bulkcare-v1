@@ -43,6 +43,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import GetStarted from "../Common/GetStarted";
 
 // Submenu for Services page
 // Submenu for Services page
@@ -343,7 +344,7 @@ const Navbar = () => {
             </div>
             <div className="flex gap-2">
               {/* <Button variant={"outline"}>Log in</Button> */}
-              <Button>Get Started</Button>
+              <GetStarted/>
             </div>
           </nav>
           <div className="block lg:hidden">
@@ -380,14 +381,14 @@ const Navbar = () => {
                 <SheetContent className="overflow-y-auto">
                   <SheetHeader>
                     <SheetTitle>
-                      <div className="flex items-center gap-2">
-                        <img
-                          src="https://www.shadcnblocks.com/images/block/block-1.svg"
-                          className="w-8"
-                          alt="logo"
-                        />
-                        <span className="text-xl font-bold">Shadcn Blocks</span>
-                      </div>
+                      <Image
+                        src={`/images/logo/logo-white.svg`}
+                        alt="logo"
+                        width={100}
+                        height={100}
+                        className="hidden dark:block"
+                      />
+                        {/* <span className="text-xl font-bold">Shadcn Blocks</span> */}
                     </SheetTitle>
                   </SheetHeader>
                   <div className="my-8 flex flex-col gap-4">
@@ -525,7 +526,7 @@ const Navbar = () => {
                       </Link>
                     </div>
                     <div className="mt-2 flex flex-col gap-3">
-                      <Button>Get Started</Button>
+                      <GetStarted/>
                     </div>
                   </div>
                 </SheetContent>

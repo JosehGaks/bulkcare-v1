@@ -41,7 +41,7 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="py-18 bg-transparent pb-0 pt-0 lg:py-20 lg:pb-0 lg:pt-0 relative">
+    <section className="py-18 bg-transparent lg:py-20 relative">
       <img
         className="absolute inset-x-0 -top-20 opacity-25 "
         src={
@@ -86,7 +86,7 @@ export default function FAQ() {
         </div>
         <Separator className="h-[1px] bg-white/10 mt-4" />
         <div className="mt-12">
-          <ul className="space-y-8 gap-12 grid-cols-2 sm:grid sm:space-y-0 lg:grid-cols-3">
+          <ul className="space-y-8 gap-12 grid-cols-2 sm:grid sm:space-y-0 lg:grid-cols-3 p-8">
             {faqs.map((item, idx) => (
               <li key={idx} className="space-y-3">
                 <summary className="flex items-center justify-between font-semibold text-gray-500">

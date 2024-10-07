@@ -3,7 +3,16 @@ import SingleBlog from "./SingleBlog";
 
 const HomeBlogSection = ({ posts }: any) => {
   return (
-    <section className="py-18 bg-transparent pb-0 pt-0 lg:py-20 lg:pb-0 lg:pt-0">
+    <section className="py-20 bg-transparent lg:py-20 relative">
+            <img
+        className="absolute inset-x-0 -top-20 opacity-25 "
+        src={
+          "https://pipe.com/_next/image?url=%2Fassets%2Fimg%2Fhero-left.png&w=384&q=75"
+        }
+        width={1000}
+        height={1000}
+        alt="back bg"
+      />
       <div className="container mx-auto">
         <div className="mb-[60px]">
           <SectionTitle title={"Blog"} subtitle="Our Latest News" paragraph={""}/>

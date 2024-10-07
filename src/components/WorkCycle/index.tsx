@@ -19,10 +19,27 @@ const WorkCycle = () => {
         alt="back bg"
       />
       <div className="mx-auto max-w-screen-xl px-4 text-gray-400 md:px-8">
+      <div className="relative">
+          </div>
+          <img
+          className="absolute inset-x-0 -top-20 opacity-75 "
+          src={
+            "https://pipe.com/_next/image?url=%2Fassets%2Fimg%2Fhero-left.png&w=384&q=75"
+          }
+          width={1000}
+          height={1000}
+          alt="back bg"
+        />
+          <div
+            className="mx-auto max-w-3xl"
+            data-aos="zoom-y-out"
+            data-aos-delay={600}
+          ></div>
+
         <div className="relative mx-auto max-w-2xl sm:text-center">
           <div className="relative z-10">
             <h3 className="font-geist mt-4 text-3xl font-normal tracking-tighter text-gray-200 sm:text-4xl md:text-5xl">
-              We ensure a complete workflow cycle for you
+              We ensure  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-orange-200">a complete workflow cycle for you</span>
             </h3>
             <p className="font-geist mt-3 text-gray-200">
               We&apos;ve got everything handled from the start of your project
