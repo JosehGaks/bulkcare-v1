@@ -1,4 +1,6 @@
 import { cn } from "@/lib/utils";
+import SectionTitle from "./SectionTitle";
+import { title } from "process";
 
 
 export interface Service {
@@ -9,13 +11,20 @@ export interface Service {
 }
 
 export default function Services({
-  services}: { services: Service[] }) {
+  services,title,subtitle}: { services: Service[], title: string, subtitle: string }) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  relative z-10 py-10 max-w-7xl mx-auto">
+    <section className="py-10">
+      <div className="container mx-auto">
+      <SectionTitle title={title} subtitle={subtitle} paragraph={""}/>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  relative z-10">
       {services.map((feature, index) => (
         <Feature key={feature.title} {...feature} index={index} />
       ))}
     </div>
+      </div>
+
+    </section>
+
   );
 }
 

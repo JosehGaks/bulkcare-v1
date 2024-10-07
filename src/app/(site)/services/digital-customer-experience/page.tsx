@@ -122,7 +122,7 @@ const page = () => {
         We tailor a team of the right people with the right skills across all customer channels to increase brand loyalty and competitive advantage."
         imgSrc="/images/services/digital-customer-experience.png"
       />
-      <Services services={services} />
+      <Services services={services} title={"Bulkcare Services"} subtitle={"Transformative Digital Customer Experience"} />
       <CommonSectionServices/>
       {/* <About /> */}
       

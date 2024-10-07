@@ -89,7 +89,7 @@ We are here to make customers happy and now it’s easier to do with our new AI 
 We offer business process outsourcing and technology safeguards, including Content Moderation, Fraud Prevention, Abuse Detection, and Profile Impersonation. Expand Content Control and Verification by joining your team with ours. The results are enhanced safeguards and improved customer trust."
         imgSrc="/images/services/digital-customer-experience.png"
       />
-      <Services services={services} />
+      <Services services={services} title="OUR AI SOLUTIONS" subtitle="Customer Interactions Reimagined"/>
       <CommonSectionServices />
     </>
   );

@@ -127,7 +127,7 @@ const page = () => {
         content="Bulkcare Media is a full-stack digital marketing agency designed to help any business that wishes to increase the impact of their marketing budget, grow their customer base, stay on top of their market, and enhance ROI. We are a perfect fit for start-ups and organizations that need a wide range of high-quality marketing expertise. You no longer have to work with different vendors to fill your variety of marketing needs, we can support all marketing functions with our range of knowledge and tools. Having experienced specialists and the right technology in place, we are able to fill all resource gaps."
         imgSrc="/images/services/digital-customer-experience.png"
       />
-      <Services services={services} />
+      <Services services={services} title="CREATE A STELLAR MARKETING PLAN" subtitle="Solutions to Support Your Success"/>
       <CommonSectionServices/>
       {/* <About /> */}
       

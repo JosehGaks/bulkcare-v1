@@ -8,6 +8,7 @@ import { ConnectionBeamHero } from './ConnectionBeamHero'
 import { PageHero } from './PageHero'
 import Services_ from '../Services'
 import { getAllPosts } from '@/utils/markdown'
+import CallToAction from '../CallToAction'
 
 const CommonSectionServices = () => {
   const posts = getAllPosts(["title", "date", "excerpt", "coverImage", "slug"]);
@@ -34,6 +35,7 @@ const CommonSectionServices = () => {
         subtitle="Let’s chat about business process outsourcing for success"
         action="let's get started"
       />
+      <CallToAction />
     </>
   )
 }

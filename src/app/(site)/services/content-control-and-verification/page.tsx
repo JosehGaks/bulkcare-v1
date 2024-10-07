@@ -88,6 +88,7 @@ const page = () => {
 We offer business process outsourcing and technology safeguards, including Content Moderation, Fraud Prevention, Abuse Detection, and Profile Impersonation. Expand Content Control and Verification by joining your team with ours. The results are enhanced safeguards and improved customer trust."
         imgSrc="/images/services/digital-customer-experience.png"
       />
+      <Services services={services} title="Bulkcare Services" subtitle="Transformative Content Control and Verification" />
       <CommonSectionServices />
     </>
   );

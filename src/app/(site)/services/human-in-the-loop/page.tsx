@@ -117,7 +117,7 @@ const page = () => {
 Our capability spans customer care, app support, expansive content, and data types. Our people create both learning and experience models driving measurable outcomes across every element of your service offerings."
         imgSrc="/images/services/digital-customer-experience.png"
       />
-      <Services services={services} />
+      <Services services={services} title={"Bulkcare Expertise"} subtitle={"Core Services"} />
       <CommonSectionServices />
     </>
   );

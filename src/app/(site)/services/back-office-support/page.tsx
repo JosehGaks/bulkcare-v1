@@ -118,7 +118,7 @@ We focus on transforming experience at the personalized human level by combining
 We custom recruit agents that are 100% dedicated to your business and become extensions of your team."
         imgSrc="/images/services/digital-customer-experience.png"
       />
-      <Services services={services} />
+      <Services services={services} title="Bulkcare Services" subtitle="Transformative Back-Office Support"/>
       <CommonSectionServices />
     </>
   );
