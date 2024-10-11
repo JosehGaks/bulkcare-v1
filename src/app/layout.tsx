@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 import PreLoader from "@/components/Common/PreLoader";
 import ToasterContext from "./api/contex/ToasetContex";
 import Navbar from "@/components/Header";
+import Script from 'next/script';
 
 export default function RootLayout({
   children,
@@ -29,6 +30,26 @@ export default function RootLayout({
         <head /> will contain the components returned by the nearest parent
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
+            <Script
+        id="chatwoot-script"
+        strategy="afterInteractive" // Load the script after page is interactive
+        dangerouslySetInnerHTML={{
+          __html: `(function(d,t) {
+              var BASE_URL="https://chat.makejah.com";
+              var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+              g.src=BASE_URL+"/packs/js/sdk.js";
+              g.defer = true;
+              g.async = true;
+              s.parentNode.insertBefore(g,s);
+              g.onload=function(){
+                window.chatwootSDK.run({
+                  websiteToken: 'BHbg6epU8VbsDYRYQy8Sdmc4',
+                  baseUrl: BASE_URL
+                })
+              }
+            })(document,"script");`,
+        }}
+      />
       <head />
 
       <body className="top-0">
